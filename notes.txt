@@ -1,0 +1,26 @@
+ranorex model
+report -> activity (user) -> activity (testsuite) -> activity (testcasename) -> activity (modulename) -> items
+
+junit model
+testsuite -> properties
+          -> testcase
+          -> system-out
+          -> system-err
+
+top level element (children removed)
+<activity user="pos" host="CITF-W7-12499-0" rxversion="4.0.1.21107" osversion="Windows 7 Service Pack 1 32bit" runtimeversion="4.0.30319.296" procarch="32bit" language="en-US" screenresolution="1024x768" timestamp="3/29/2014 8:05:58 PM" timeoutfactor="1" result="Success" duration="0ms" type="root" rid="132485f778cb2ecc" totalerrorcount="7" totalwarningcount="20" totalsuccesscount="65" totalfailedcount="6" totalblockedcount="2" />
+
+totalfailedcount="6"
+Regex Search: testcasename.*result="Failed"
+
+totalsuccesscount="65"
+Regex Search: testcasename.*result="Success"
+
+totalerrorcount="7"
+Regex Search: level="Error"
+
+totalwarningcount="20"
+Regex Search: level="Error"
+
+totalblockedcount="2"
+Regex Search: totalblockedcount="1"

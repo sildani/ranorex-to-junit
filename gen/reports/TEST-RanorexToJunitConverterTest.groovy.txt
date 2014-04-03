@@ -1,0 +1,10 @@
+Testsuite: RanorexToJunitConverterTest.groovy
+Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 0 sec
+
+	Caused an ERROR
+RanorexToJunitConverterTest.groovy
+java.lang.ClassNotFoundException: RanorexToJunitConverterTest.groovy
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+

@@ -1,0 +1,47 @@
+<project name="RanorexToJunitConverter" default="dist" basedir=".">
+
+  <property name="lib"     location="lib"            />
+  <property name="src"     location="src"            />
+  <property name="test"    location="test"           />
+  <property name="gen"     location="gen"            />
+  <property name="build"   location="${gen}/build"   />
+  <property name="reports" location="${gen}/reports" />
+  <property name="dist"    location="${gen}/dist"    />
+
+  <path id="classpath">
+    <fileset dir="${src}" includes="**/*.groovy" />
+    <fileset dir="${lib}" includes="**/*.jar" />
+  </path>  
+
+  <path id="tests.classpath">
+    <path refid="classpath" />
+    <fileset dir="${test}" includes="**/*.groovy" />
+  </path>
+
+  <target name="init">
+    <tstamp/>
+    <mkdir dir="${build}" />
+    <mkdir dir="${reports}" />
+    <mkdir dir="${dist}" />
+  </target>
+
+  <target name="test" depends="init">
+    <junit printsummary="yes" haltonfailure="yes" showoutput="yes" logfailedtests="yes">
+      <classpath>
+        <path refid="tests.classpath" />
+      </classpath>
+      <formatter type="plain" />
+      <test name="RanorexToJunitConverterTest" haltonfailure="yes" todir="${reports}" />
+    </junit>
+  </target>
+
+  <target name="dist" depends="test" description="generate the distribution" >
+    <mkdir dir="${dist}/lib" />
+    <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}" />
+  </target>
+
+  <target name="clean" description="clean up" >
+    <delete dir="${gen}" />
+  </target>
+
+</project>
