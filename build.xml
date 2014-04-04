@@ -199,7 +199,7 @@
     </copy>
   </target>
 
-  <target name="jar" depends="test" description="Create an executable JAR">
+  <target name="jar" depends="clean, test" description="Create an executable JAR">
     <one-jar destfile="${gen}/lib/${ant.project.name}-${version}.jar">
         <main>
             <fileset dir="${gen}/classes"/>
