@@ -149,8 +149,64 @@ class RanorexToJunitConverterTest {
   </properties>
   <testcase classname="Outer Test Case - Inner Test Case - Module1" name="success" time="2.700" />
   <testcase classname="Outer Test Case - Inner Test Case - Module2" name="success" time="2.000" />
-  <testcase classname="Outer Test Case - Inner Test Case - Module3" name="failed" time="2.000">
+  <testcase classname="Outer Test Case - Inner Test Case - Module3" name="fail" time="2.000">
     <failure type="Failed to find item">Message: No element found for path X within 2m. Failed to find item "The Great Gatsby". | Path: Xpath_expression | Stacktrace:    at Ranorex.Core.Repository.RepoItemInfo.Find[T](Boolean findSingle, Boolean throwException)    at Dashboard.NewFrontCounterRepositoryFolders.GenericViewFolder.get_ButtonFootlong()    at Dashboard.TestSuites.Modules.RemoteOrdering.VerifyRemoteOrderReceipt.Ranorex.Core.Testing.ITestModule.Run()    at Ranorex.Core.Testing.TestSuiteModule.RunInternal(DataContext parentDataContext)</failure>
+  </testcase>
+  <testcase classname="Outer Test Case - Inner Test Case - Module4" name="success" time="2.700" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module5" name="success" time="2.700" />
+</testsuite>'''
+
+    compareXml(input, expectedOutput)
+  }
+
+  @Test
+  void should_parse_errors() {
+    def input = '''<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <activity user="user" host="pandaria.local" rxversion="4.0" osversion="Windows 7 Service Pack 1 32bit" runtimeversion="4.0" procarch="32bit" language="en-US" screenresolution="1024x768" timestamp="3/29/2014 8:05:58 PM" timeoutfactor="1" result="Success" duration="0ms" type="root" rid="132485f778cb2ecc" totalerrorcount="0" totalwarningcount="0" totalsuccesscount="1" totalfailedcount="0" totalblockedcount="0">
+    <detail>Ranorex Testscript</detail>
+    <activity testsuitename="My_Cool_Testsuite" runconfigname="Coolness" runlabel="" maxchildren="1" result="Success" duration="2.7m" type="test suite" rid="65a9b3684afb7da" totalerrorcount="0" totalwarningcount="0" totalsuccesscount="1" totalfailedcount="0" totalblockedcount="0">
+      <params>
+        <param name="Param1" />
+        <param name="Param2">Value2</param>
+      </params>
+      <detail />
+      <activity testcasename="Outer Test Case" testcaseid="059660b2-85da-4dbe-8a52-ee634a73caba" maxchildren="1" result="Success" duration="2.7m" type="test case" rid="bcd226b138cff16" totalerrorcount="0" totalwarningcount="0" totalsuccesscount="1" totalfailedcount="6" totalblockedcount="0">
+        <activity testcasename="Inner Test Case" testcaseid="8f4c7cda-711d-403e-a719-b6f836ba23b6" maxchildren="0" result="Success" duration="2.7m" type="test case" rid="6d2ab1592db82c" totalerrorcount="0" totalwarningcount="0" totalsuccesscount="1" totalfailedcount="0" totalblockedcount="0">
+          <activity modulename="Module1" moduleid="moduleId1" moduletype="Module Type" result="Success" duration="2700ms" type="test module" rid="rid1" />
+          <activity modulename="Module2" moduleid="moduleId2" moduletype="Module Type" result="Success" duration="2m" type="test module" rid="rid2" />
+          <activity modulename="Module3" moduleid="moduleId3" moduletype="Module Type" result="Success" duration="2m" type="test module" rid="rid3">
+            <item time="29:37.378" level="Info" category="Data">
+              <message>
+                Current variable values:
+                <br />
+                $Variable = true
+              </message>
+              <metainfo loglvl="Info" />
+            </item>
+            <item time="29:39.421" level="Error" category="User">
+              <message>RefreshSystemSettings Failed: Unable to connect to the remote server</message>
+              <metainfo loglvl="Error" />
+            </item>
+          </activity>
+          <activity modulename="Module4" moduleid="moduleId4" moduletype="Module Type" result="Success" duration="2700ms" type="test module" rid="rid4" />
+          <activity modulename="Module5" moduleid="moduleId5" moduletype="Module Type" result="Success" duration="2700ms" type="test module" rid="rid5" />
+        </activity>
+      </activity>
+    </activity>
+  </activity>
+</report>'''
+
+    def expectedOutput = '''<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite hostname="pandaria.local" name="My_Cool_Testsuite" tests="5" failures="0" errors="1" time="2.700" timestamp="2014-03-29T20:05:58">
+  <properties>
+    <property name="Param1" value="" />
+    <property name="Param2" value="Value2" />
+  </properties>
+  <testcase classname="Outer Test Case - Inner Test Case - Module1" name="success" time="2.700" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module2" name="success" time="2.000" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module3" name="error" time="2.000">
+    <error type="RefreshSystemSettings Failed: Unable to connect to the remote server">Current variable values: $Variable = true</error>
   </testcase>
   <testcase classname="Outer Test Case - Inner Test Case - Module4" name="success" time="2.700" />
   <testcase classname="Outer Test Case - Inner Test Case - Module5" name="success" time="2.700" />

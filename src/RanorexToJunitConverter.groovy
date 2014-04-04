@@ -14,23 +14,36 @@ class RanorexToJunitConverter {
 
     def testCases = [:]
     def failures = [:]
+    def errors = [:]
 
     testsuite.activity.each { outerTestCase ->
       outerTestCase.activity.each { innerTestCase ->
         innerTestCase.activity.each { module ->
           def key = "${outerTestCase.@testcasename.text()} - ${innerTestCase.@testcasename.text()} - ${module.@modulename.text()}"
-          def result = module.@result.text().toLowerCase()
-          if (result == 'failed') {
+          def result = (module.@result.text() == 'Success' ? 'success' : 'fail')
+          if (result == 'fail') {
             def errorItem = module.item.findAll { it.@level.text() == 'Error' }[0]
             failures.put(key, [type: module.errmsg.text(), message: errorItem.message.text(), path: errorItem.metainfo.@path.text(), stacktrace: errorItem.metainfo.@stacktrace.text()])
+          } else {
+            // is there an error item anyway? if so, we're dealing with an ERROR condition (as opposed to a FAILURE, handled above)
+            def errorItem = module.item.findAll { it.@level.text() == 'Error' }[0]
+            if (errorItem) {
+              result = 'error'
+              def errorMessages = []
+              module.item.findAll { it.@level.text() != 'Error' }.each { item ->
+                errorMessages << parseText(item.message.text())
+              }
+              errors.put(key, [type: errorItem.message.text(), message: errorMessages.join(' | ')])
+            }
           }
+
           testCases.put(key, [name: result, time: parseDuration(module.@duration.text())])
         }
       }
     }
 
     writer.write '<?xml version="1.0" encoding="UTF-8"?>'
-    junit.testsuite(hostname: hostname, name: testsuite.@testsuitename.text(), tests: testCases.size(), failures: failures.size(), errors: 0, time: parseDuration(testsuite.@duration.text()), timestamp: timestamp) {
+    junit.testsuite(hostname: hostname, name: testsuite.@testsuitename.text(), tests: testCases.size(), failures: failures.size(), errors: errors.size(), time: parseDuration(testsuite.@duration.text()), timestamp: timestamp) {
       properties() {
         testsuite.params.param.each {
           property(name: it.@name.text(), value: it.text())
@@ -40,8 +53,11 @@ class RanorexToJunitConverter {
         testcase(classname: classname, name: testCase.name, time: testCase.time) {
           if (failures.keySet().contains(classname)) {
             def f = failures.get(classname)
-            StringBuffer b = new StringBuffer()
             failure(type: f.type, "Message: ${parseText(f.message)} | Path: ${f.path} | Stacktrace: ${f.stacktrace}")
+          }
+          if (errors.keySet().contains(classname)) {
+            def e = errors.get(classname)
+            error(type: e.type, e.message)
           }
         }
       }
