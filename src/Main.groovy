@@ -1,14 +1,49 @@
 class Main {
   public static void main(args) {
-    if (args.size() != 2) {
-      throw new IllegalArgumentException("Must pass two arguments - the relative location of the Ranorex " +
-        "test report file and the name of the file itself.")
-    }
 
-    def inputFile = new File(args[0] + File.separator + args[1])
-    def outputFile = new File(args[0] + File.separator + 'TESTS-TestSuites.xml').withWriter { out ->
+    def options = parseArgs(args)
+
+
+    def inputFile = new File(options.inputFile)
+    def outputFile = new File(options.outputFile)
+
+    outputFile.withWriter { out ->
       out.write(new RanorexToJunitConverter().convert(inputFile.getText()))
     }
 
+    // def outputFile = new File(args[0] + File.separator + 'TESTS-TestSuites.xml').withWriter { out ->
+    //   out.write(new RanorexToJunitConverter().convert(inputFile.getText()))
+    // }
+
   }
+
+  public static parseArgs(args) {
+    def options = [:]
+
+    def cliOptions = getOptions(args)
+    options.inputFile = cliOptions.inputFile
+    options.outputFile = cliOptions.outputFile
+
+    options
+  }
+
+  private static getOptions(args) {
+
+    def cli = new CliBuilder(usage: 'main <options>')
+    cli.with {
+      h longOpt: 'help', 'Show usage information'
+      i longOpt: 'inputFile', args: 1, argName: 'input_file', required: true, 'Ranorex log input file'
+      o longOpt: 'outputFile', args: 1, argName: 'output_file', required: true, 'Output file'
+    }
+
+    def cliOptions = cli.parse(args)
+
+    if (cliOptions == null || cliOptions.h) {
+      cli.usage()
+      System.exit(2)
+    }
+
+    cliOptions
+  }
+
 }
