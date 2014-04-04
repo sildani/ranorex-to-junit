@@ -3,21 +3,15 @@ class Main {
 
     def options = parseArgs(args)
 
-
     def inputFile = new File(options.inputFile)
     def outputFile = new File(options.outputFile)
 
     outputFile.withWriter { out ->
       out.write(new RanorexToJunitConverter().convert(inputFile.getText()))
     }
-
-    // def outputFile = new File(args[0] + File.separator + 'TESTS-TestSuites.xml').withWriter { out ->
-    //   out.write(new RanorexToJunitConverter().convert(inputFile.getText()))
-    // }
-
   }
 
-  public static parseArgs(args) {
+  private static parseArgs(args) {
     def options = [:]
 
     def cliOptions = getOptions(args)
@@ -39,7 +33,6 @@ class Main {
     def cliOptions = cli.parse(args)
 
     if (cliOptions == null || cliOptions.h) {
-      cli.usage()
       System.exit(2)
     }
 
