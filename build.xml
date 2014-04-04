@@ -33,12 +33,11 @@
     <echo message="run 'ant -projecthelp' to see a list of valid targets" />
   </target>
 
-  <target name="initTests" unless="test.pattern">
+  <target name="init-tests" unless="test.pattern">
     <property name="test.pattern" value="**/*Test.class" />
-    <property name="spec.pattern" value="**/*Spec.class" />
   </target>
 
-  <target name="init" depends="git-version, initTests">
+  <target name="init" depends="git-version, init-tests">
     <mkdir dir="${gen}" />
     <mkdir dir="${gen}/classes" />
     <mkdir dir="${gen}/unit" />
@@ -210,7 +209,10 @@
         <lib>
             <fileset file="${lib}/groovy-all-2.1.3.jar" />
             <fileset file="${lib}/log4j-1.2.15.jar" />
+            <fileset file="${lib}/hamcrest-core-1.3.jar" />
             <fileset file="${lib}/commons-cli-1.2.jar" />
+            <fileset file="${lib}/serializer.jar" />
+            <fileset file="${lib}/xalan.jar" />
         </lib>
     </one-jar>
   </target>
