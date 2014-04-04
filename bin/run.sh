@@ -1,3 +1,3 @@
 #!/bin/bash
 
-groovy src/Main
+java -jar $*
