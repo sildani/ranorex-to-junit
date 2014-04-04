@@ -72,29 +72,33 @@ class RanorexToJunitConverter {
   }
 
   def parseDuration(ranorexDuration) {
-    if (ranorexDuration =~ /^[0-9]*\.[0-9]*m$/) {
-      // dealing in minutes
-      def marker = ranorexDuration.indexOf('.')
-      def end = ranorexDuration.length() - 1
-      return "${ranorexDuration.substring(0, marker)}.${ranorexDuration.substring(marker+1, end).padRight(3, '0')}"
-    }
-    if (ranorexDuration =~ /^[0-9]*m$/) {
-      // dealing in minutes
-      def end = ranorexDuration.length() - 1
-      return "${ranorexDuration.substring(0, end)}.000"
-    }
-    if (ranorexDuration =~ /^[0-9]*\.[0-9]*s$/) {
-      // dealing in seconds
-      def end = ranorexDuration.length() - 1
-      return (Float.parseFloat(ranorexDuration.substring(0, end)) / 100).toString().substring(0,5)
-    }
-    if (ranorexDuration =~ /^[0-9]*ms$/) {
-      // dealing in milliseconds
-      def end = ranorexDuration.length() - 2
-      return parseDuration("${(Float.parseFloat(ranorexDuration.substring(0, end)) / 1000)}m")
+    def matcher = ranorexDuration =~ /([0-9]*\.?[0-9]+)([a-z]*)/
+
+    if (matcher.matches()) {
+      def value = new BigDecimal(matcher[0][1])
+      def unit = matcher[0][2]
+      def duration
+
+      switch(unit) {
+        case "m":
+          duration = value * 60
+          break
+        case "s":
+          duration = value
+          break
+        case "ms":
+          duration = value / 1000
+          break
+      }
+      
+      return round(duration).toString()
     }
 
     throw new IllegalArgumentException("ranorexDuration not understood: ${ranorexDuration}")
+  }
+
+  def round(value) {
+    new BigDecimal(value).setScale(1, BigDecimal.ROUND_HALF_UP)    
   }
 
   def parseText(ranorexText) {

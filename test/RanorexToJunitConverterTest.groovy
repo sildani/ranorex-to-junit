@@ -54,12 +54,12 @@ class RanorexToJunitConverterTest {
 </report>'''
 
     def expectedOutput = '''<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite hostname="pandaria.local" name="My_Cool_Testsuite" tests="1" failures="0" errors="0" time="2.700" timestamp="2014-03-29T20:05:58">
+<testsuite hostname="pandaria.local" name="My_Cool_Testsuite" tests="1" failures="0" errors="0" time="162.0" timestamp="2014-03-29T20:05:58">
   <properties>
     <property name="Param1" value="" />
     <property name="Param2" value="Value2" />
   </properties>
-  <testcase classname="Outer Test Case - Inner Test Case - Module" name="success" time="2.700" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module" name="success" time="2.7" />
 </testsuite>'''
 
     compareXml(input, expectedOutput)
@@ -91,16 +91,16 @@ class RanorexToJunitConverterTest {
 </report>'''
 
     def expectedOutput = '''<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite hostname="pandaria.local" name="My_Cool_Testsuite" tests="5" failures="0" errors="0" time="2.700" timestamp="2014-03-29T20:05:58">
+<testsuite hostname="pandaria.local" name="My_Cool_Testsuite" tests="5" failures="0" errors="0" time="162.0" timestamp="2014-03-29T20:05:58">
   <properties>
     <property name="Param1" value="" />
     <property name="Param2" value="Value2" />
   </properties>
-  <testcase classname="Outer Test Case - Inner Test Case - Module1" name="success" time="2.700" />
-  <testcase classname="Outer Test Case - Inner Test Case - Module2" name="success" time="2.000" />
-  <testcase classname="Outer Test Case - Inner Test Case - Module3" name="success" time="2.000" />
-  <testcase classname="Outer Test Case - Inner Test Case - Module4" name="success" time="2.700" />
-  <testcase classname="Outer Test Case - Inner Test Case - Module5" name="success" time="2.700" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module1" name="success" time="2.7" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module2" name="success" time="120.0" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module3" name="success" time="120.0" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module4" name="success" time="2.7" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module5" name="success" time="2.7" />
 </testsuite>'''
 
     compareXml(input, expectedOutput)
@@ -142,18 +142,18 @@ class RanorexToJunitConverterTest {
 </report>'''
 
     def expectedOutput = '''<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite hostname="pandaria.local" name="My_Cool_Testsuite" tests="5" failures="1" errors="0" time="2.700" timestamp="2014-03-29T20:05:58">
+<testsuite hostname="pandaria.local" name="My_Cool_Testsuite" tests="5" failures="1" errors="0" time="162.0" timestamp="2014-03-29T20:05:58">
   <properties>
     <property name="Param1" value="" />
     <property name="Param2" value="Value2" />
   </properties>
-  <testcase classname="Outer Test Case - Inner Test Case - Module1" name="success" time="2.700" />
-  <testcase classname="Outer Test Case - Inner Test Case - Module2" name="success" time="2.000" />
-  <testcase classname="Outer Test Case - Inner Test Case - Module3" name="fail" time="2.000">
+  <testcase classname="Outer Test Case - Inner Test Case - Module1" name="success" time="2.7" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module2" name="success" time="120.0" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module3" name="fail" time="120.0">
     <failure type="Failed to find item">Message: No element found for path X within 2m. Failed to find item "The Great Gatsby". | Path: Xpath_expression | Stacktrace:    at Ranorex.Core.Repository.RepoItemInfo.Find[T](Boolean findSingle, Boolean throwException)    at Dashboard.NewFrontCounterRepositoryFolders.GenericViewFolder.get_ButtonFootlong()    at Dashboard.TestSuites.Modules.RemoteOrdering.VerifyRemoteOrderReceipt.Ranorex.Core.Testing.ITestModule.Run()    at Ranorex.Core.Testing.TestSuiteModule.RunInternal(DataContext parentDataContext)</failure>
   </testcase>
-  <testcase classname="Outer Test Case - Inner Test Case - Module4" name="success" time="2.700" />
-  <testcase classname="Outer Test Case - Inner Test Case - Module5" name="success" time="2.700" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module4" name="success" time="2.7" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module5" name="success" time="2.7" />
 </testsuite>'''
 
     compareXml(input, expectedOutput)
@@ -198,18 +198,18 @@ class RanorexToJunitConverterTest {
 </report>'''
 
     def expectedOutput = '''<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite hostname="pandaria.local" name="My_Cool_Testsuite" tests="5" failures="0" errors="1" time="2.700" timestamp="2014-03-29T20:05:58">
+<testsuite hostname="pandaria.local" name="My_Cool_Testsuite" tests="5" failures="0" errors="1" time="162.0" timestamp="2014-03-29T20:05:58">
   <properties>
     <property name="Param1" value="" />
     <property name="Param2" value="Value2" />
   </properties>
-  <testcase classname="Outer Test Case - Inner Test Case - Module1" name="success" time="2.700" />
-  <testcase classname="Outer Test Case - Inner Test Case - Module2" name="success" time="2.000" />
-  <testcase classname="Outer Test Case - Inner Test Case - Module3" name="error" time="2.000">
+  <testcase classname="Outer Test Case - Inner Test Case - Module1" name="success" time="2.7" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module2" name="success" time="120.0" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module3" name="error" time="120.0">
     <error type="RefreshSystemSettings Failed: Unable to connect to the remote server">Current variable values: $Variable = true</error>
   </testcase>
-  <testcase classname="Outer Test Case - Inner Test Case - Module4" name="success" time="2.700" />
-  <testcase classname="Outer Test Case - Inner Test Case - Module5" name="success" time="2.700" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module4" name="success" time="2.7" />
+  <testcase classname="Outer Test Case - Inner Test Case - Module5" name="success" time="2.7" />
 </testsuite>'''
 
     compareXml(input, expectedOutput)
@@ -231,14 +231,15 @@ class RanorexToJunitConverterTest {
 
   @Test
   void should_parse_ranorex_duration() {
-    assert converter.parseDuration('2.7m') == '2.700'
-    assert converter.parseDuration('29.7m') == '29.700'
-    assert converter.parseDuration('4.6m') == '4.600'
-    assert converter.parseDuration('2m') == '2.000'
-    assert converter.parseDuration('10.53s') == '0.105'
-    assert converter.parseDuration('6848ms') == '6.848'
-    assert converter.parseDuration('2700ms') == '2.700'
+    assert converter.parseDuration('2.7m') == '162.0'
+    assert converter.parseDuration('29.7m') == '1782.0'
+    assert converter.parseDuration('4.6m') == '276.0'
+    assert converter.parseDuration('2m') == '120.0'
+    assert converter.parseDuration('10.53s') == '10.5'
+    assert converter.parseDuration('6848ms') == '6.8'
+    assert converter.parseDuration('2700ms') == '2.7'
   }
+
 
   @Test(expected=IllegalArgumentException)
   void should_throw_exception_if_ranorex_duration_not_understood() {
