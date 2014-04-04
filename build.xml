@@ -1,47 +1,217 @@
-<project name="RanorexToJunitConverter" default="dist" basedir=".">
+<!-- Copyright (c) 2011 Value Pay Services, LLC. All rights reserved. -->
 
-  <property name="lib"     location="lib"            />
-  <property name="src"     location="src"            />
-  <property name="test"    location="test"           />
-  <property name="gen"     location="gen"            />
-  <property name="build"   location="${gen}/build"   />
-  <property name="reports" location="${gen}/reports" />
-  <property name="dist"    location="${gen}/dist"    />
+<project name="ranorex-junit-converter" default="help" basedir=".">
+  <description>
+    Ranorex to jUnit Converter
+  </description>
 
-  <path id="classpath">
-    <fileset dir="${src}" includes="**/*.groovy" />
-    <fileset dir="${lib}" includes="**/*.jar" />
-  </path>  
+  <property environment="env" />
 
-  <path id="tests.classpath">
-    <path refid="classpath" />
-    <fileset dir="${test}" includes="**/*.groovy" />
+  <property name="src" location="src" />
+  <property name="src-unit" location="test" />
+  <property name="lib" location="lib" />
+  <property name="gen" location="gen" />
+  <property name="conf" location="conf" />
+  <property name="version.file" location="VERSION" />
+  <property name="version.gen.file" location="${gen}/classes/${ant.project.name}.version" />
+  <property name="build.number" value="0" />
+
+  <property name="one-jar.dist.dir" value="${lib}"/> 
+  <import file="${conf}/one-jar-ant-task.xml" optional="true" /> 
+
+  <path id="cp">
+    <fileset dir="${lib}/" />
+    <pathelement location="${gen}/classes" />
+    <pathelement location="${gen}/unit" />
   </path>
 
-  <target name="init">
-    <tstamp/>
-    <mkdir dir="${build}" />
-    <mkdir dir="${reports}" />
-    <mkdir dir="${dist}" />
+  <target name="echo">
+    <echoproperties />
   </target>
 
-  <target name="test" depends="init">
-    <junit printsummary="yes" haltonfailure="yes" showoutput="yes" logfailedtests="yes">
-      <classpath>
-        <path refid="tests.classpath" />
-      </classpath>
-      <formatter type="plain" />
-      <test name="RanorexToJunitConverterTest" haltonfailure="yes" todir="${reports}" />
-    </junit>
+  <target name="help">
+    <echo message="run 'ant -projecthelp' to see a list of valid targets" />
   </target>
 
-  <target name="dist" depends="test" description="generate the distribution" >
-    <mkdir dir="${dist}/lib" />
-    <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}" />
+  <target name="initTests" unless="test.pattern">
+    <property name="test.pattern" value="**/*Test.class" />
+    <property name="spec.pattern" value="**/*Spec.class" />
   </target>
 
-  <target name="clean" description="clean up" >
+  <target name="init" depends="git-version, initTests">
+    <mkdir dir="${gen}" />
+    <mkdir dir="${gen}/classes" />
+    <mkdir dir="${gen}/unit" />
+    <mkdir dir="${gen}/dist" />
+    <mkdir dir="${gen}/build" />
+ </target>
+
+  <target name="clean" description="Clean up">
     <delete dir="${gen}" />
   </target>
 
+  <available file=".git" type="dir" property="git.present"/>
+
+  <target name="git-revision" description="Store git revision in ${repository.version}" if="git.present">
+      <exec executable="git" outputproperty="revision.local" failifexecutionfails="false" errorproperty="">
+          <arg value="describe"/>
+          <arg value="--tags"/>
+          <arg value="--always"/>
+          <arg value="HEAD"/>
+      </exec>
+      <condition property="revision.local" value="${git.revision}" else="unknown">
+          <and>
+              <isset property="revision.local"/>
+              <length string="${revision.local}" trim="yes" length="0" when="greater"/>
+          </and>
+      </condition>
+  </target>
+
+  <target name="git-version" depends="git-revision">
+    <touch file="${version.gen.file}" mkdirs="true" />
+
+    <loadfile property="version.project.tmp" srcFile="${version.file}" />
+    <echo file="${version.gen.file}">${version.project.tmp}</echo>
+    <replaceregexp file="${version.gen.file}" match="\n" replace="" />
+    <loadfile property="version.project" srcFile="${version.gen.file}" />
+
+    <!-- Version is in property {version.project} -->
+    
+    <property name="version" value="${version.project}.${revision.local}" />
+    <echo file="${version.gen.file}">${version}</echo>
+    <copy file="${version.gen.file}" toDir="${gen}/build" />
+
+    <property name="package.version" value="${version.project}.${revision.local}" />
+    <echo message="Package version: ${package.version}" />
+    <echo message="Package version: ${version.project}.${revision.local}" />
+
+    <echo message="Build version: ${version}" />
+  </target>
+
+  <taskdef name="groovyc" classname="org.codehaus.groovy.ant.Groovyc" classpathref="cp" />
+
+  <target name="compile" depends="init, compile-src, compile-unit, compile-resources" description="Compile the source "/>
+
+  <target name="compile-src" depends="init">
+
+    <groovyc srcdir="${src}" destdir="${gen}/classes" classpathref="cp">
+      <javac source="1.7" target="1.7" debug="on" />
+    </groovyc>
+  </target>
+
+  <target name="compile-unit" depends="init">
+
+    <groovyc srcdir="${src-unit}" destdir="${gen}/unit" classpathref="cp">
+      <javac source="1.7" target="1.7" debug="on" />
+    </groovyc>
+  </target>
+
+  <target name="compile-resources" description="Copy resources required by source">
+    <copy toDir="${gen}/classes">
+      <fileset dir="${src-unit}">
+        <exclude name="**/*.groovy" />
+      </fileset>
+    </copy>
+  </target>
+
+  <property name="test.formatter" value="xml"/>
+  <property name="test.useFile" value="true"/>
+  <property name="test.haltOnError" value="no"/>
+  <property name="test.haltOnFailure" value="no"/>
+
+  <target name="test" depends="test-unit" description="Run jUnit test classes"/>
+
+  <target name="test-unit" depends="compile">
+
+    <delete dir="${gen}/unit/RESULTS" />
+    <mkdir dir="${gen}/unit/RESULTS" />
+    <mkdir dir="${gen}/unit/RESULTS/html" />
+
+    <junit printsummary="yes" haltonerror="${test.haltOnError}" haltonfailure="${test.haltOnFailure}" fork="false" failureproperty="testFailed">
+      <formatter type="${test.formatter}" usefile="${test.useFile}" />
+      <batchtest todir="${gen}/unit/RESULTS">
+        <fileset dir="${gen}/unit">
+          <include name="${test.pattern}" />
+          <include name="${spec.pattern}" />
+        </fileset>
+      </batchtest>
+      <classpath refid="cp" />
+      <classpath path="conf" />
+    </junit>
+
+    <junitreport todir="${gen}/unit/RESULTS">
+      <fileset dir="${gen}/unit/RESULTS">
+        <include name="TEST-*.xml" />
+      </fileset>
+      <!--<report format="frames" todir="${gen}/unit/RESULTS/html"/>-->
+      <report todir="${gen}/unit/RESULTS/html" />
+    </junitreport>
+
+    <echo message="See a pretty report at ${gen}/unit/RESULTS/html/index.html" />
+    <fail if="testFailed" message="Unit test(s) failed.  See reports!" />
+
+  </target>
+
+  <target name="ensure-test-name" unless="test">
+    <fail message="You must run this target with -Dtest={testName}"/>
+  </target>
+
+  <target name="ensure-method-list" unless="methods">
+    <fail message="You must run this target with -Dmethods={methods}"/>
+  </target>
+
+  <target name="run-test" depends="compile, ensure-test-name, ensure-method-list" description="Run specific jUnit tests">
+    <delete dir="${gen}/unit/RESULTS" />
+    <mkdir dir="${gen}/unit/RESULTS" />
+    <mkdir dir="${gen}/unit/RESULTS/html" />
+
+    <junit printsummary="yes" haltonerror="${test.haltOnError}" haltonfailure="${test.haltOnFailure}" fork="false" failureproperty="testFailed">
+      <formatter type="${test.formatter}" usefile="${test.useFile}" />
+      <test todir="${gen}/unit/RESULTS" name="${test}" methods="${methods}" />        
+      <classpath refid="cp" />
+    </junit>
+
+    <fail if="testFailed" message="Unit test(s) failed.  See reports!" />
+
+  </target>
+
+  <target name="doc" depends="test, git-version" description="Creates javadoc">
+    <delete dir="${gen}/doc" />
+    <mkdir dir="${gen}/doc" />
+
+    <taskdef name="groovydoc" classname="org.codehaus.groovy.ant.Groovydoc" classpathref="cp" />
+
+    <tstamp>
+      <format property="year" pattern="yyyy" locale="en,US" />
+    </tstamp>
+
+    <property name="org" value="Independent Purchasing Cooperative, Inc." />
+
+    <groovydoc packagenames="**.*" use="true" sourcepath="src" destdir="gen/doc/" doctitle="${ant.project.name} API" windowtitle="${ant.project.name} API" private="true" header="v${version}" footer="Copyright (c) ${year} ${org}. All rights reserved.">
+      <link packages="java.,org.xml.,javax.,org.xml." href="http://java.sun.com/j2se/1.5.0/docs/api" />
+      <link packages="org.apache.ant.,org.apache.tools.ant." href="http://www.dpml.net/api/ant/1.7.0" />
+      <link packages="org.junit.,junit.framework." href="http://junit.sourceforge.net/junit3.8.1/javadoc/" />
+      <link packages="groovy.,org.codehaus.groovy." href="http://groovy.codehaus.org/api/" />
+    </groovydoc>
+
+    <copy todir="gen/doc" overwrite="true">
+      <fileset dir="res/api" />
+    </copy>
+  </target>
+
+  <target name="jar" depends="test" description="Create an executable JAR">
+    <one-jar destfile="${gen}/lib/${ant.project.name}-${version}.jar">
+        <main>
+            <fileset dir="${gen}/classes"/>
+        </main>
+        <manifest>
+          <attribute name="One-Jar-Main-Class" value="com.ipcoop.Main" />
+        </manifest>
+        <lib>
+            <fileset file="${lib}/groovy-all-2.1.3.jar" />
+            <fileset file="${lib}/log4j-1.2.15.jar" />
+            <fileset file="${lib}/commons-cli-1.2.jar" />
+        </lib>
+    </one-jar>
+  </target>
 </project>
