@@ -231,6 +231,8 @@ class RanorexToJunitConverterTest {
 
   @Test
   void should_parse_ranorex_duration() {
+    assert converter.parseDuration('0ms') == '0.0'
+    assert converter.parseDuration('1.1h') == '3960.0'
     assert converter.parseDuration('2.7m') == '162.0'
     assert converter.parseDuration('29.7m') == '1782.0'
     assert converter.parseDuration('4.6m') == '276.0'

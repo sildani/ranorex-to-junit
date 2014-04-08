@@ -80,14 +80,17 @@ class RanorexToJunitConverter {
       def duration
 
       switch(unit) {
+        case "h":
+          duration = value * 3600
+          break
         case "m":
           duration = value * 60
           break
-        case "s":
-          duration = value
-          break
         case "ms":
           duration = value / 1000
+          break
+        default:
+          duration = value
           break
       }
       
