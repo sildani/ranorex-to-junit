@@ -1,5 +1,9 @@
 *.class
 
+# Mac files
+.DS_Store
+
+
 # Package Files #
 *.jar
 *.war
