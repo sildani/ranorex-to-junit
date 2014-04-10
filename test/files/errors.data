@@ -3750,7 +3750,8 @@
 						level="Info"
 						category="SystemSummary">
 							<message>
-								Host: CITF-W7-18176-0<br/>Ranorex version: 4.0.1.21107<br/>OS version: Windows 7 Service Pack 1 32bit<br/>OS default locale: en-US<br/>.NET Runtime version: 4.0.30319.296<br/>Number of logical CPUs: 1<br/>Number of displays: 1<br/>Screen dimension: 1024x768<br/>Memory: 38% load, phy 1888mb free/3071mb total, virt 1575mb free/2047mb total.&#10;
+								Host: CITF-W7-18176-0<br/>Ranorex version: 4.0.1.21107<br/>OS version: Windows 7 Service Pack 1 32bit<br/>OS default locale: en-US<br/>.NET Runtime version: 4.0.30319.296<br/>Number of logical CPUs: 1<br/>Number of displays: 1<br/>Screen dimension: 1024x768<br/>Memory: 38% load, phy 1888mb free/3071mb total, virt 1575mb free/2047mb total.
+&#10;
 							</message>
 							<metainfo
 							loglvl="Info"/>
@@ -4898,7 +4899,8 @@ Waiting 10 seconds...
 						level="Info"
 						category="SystemSummary">
 							<message>
-								Host: CITF-W7-18176-0<br/>Ranorex version: 4.0.1.21107<br/>OS version: Windows 7 Service Pack 1 32bit<br/>OS default locale: en-US<br/>.NET Runtime version: 4.0.30319.296<br/>Number of logical CPUs: 1<br/>Number of displays: 1<br/>Screen dimension: 1024x768<br/>Memory: 46% load, phy 1635mb free/3071mb total, virt 1563mb free/2047mb total.&#10;
+								Host: CITF-W7-18176-0<br/>Ranorex version: 4.0.1.21107<br/>OS version: Windows 7 Service Pack 1 32bit<br/>OS default locale: en-US<br/>.NET Runtime version: 4.0.30319.296<br/>Number of logical CPUs: 1<br/>Number of displays: 1<br/>Screen dimension: 1024x768<br/>Memory: 46% load, phy 1635mb free/3071mb total, virt 1563mb free/2047mb total.
+&#10;
 							</message>
 							<metainfo
 							loglvl="Info"/>
@@ -4918,7 +4920,8 @@ Waiting 10 seconds...
 						level="Info"
 						category="SystemSummary">
 							<message>
-								Host: CITF-W7-18176-0<br/>Ranorex version: 4.0.1.21107<br/>OS version: Windows 7 Service Pack 1 32bit<br/>OS default locale: en-US<br/>.NET Runtime version: 4.0.30319.296<br/>Number of logical CPUs: 1<br/>Number of displays: 1<br/>Screen dimension: 1024x768<br/>Memory: 50% load, phy 1516mb free/3071mb total, virt 1568mb free/2047mb total.&#10;
+								Host: CITF-W7-18176-0<br/>Ranorex version: 4.0.1.21107<br/>OS version: Windows 7 Service Pack 1 32bit<br/>OS default locale: en-US<br/>.NET Runtime version: 4.0.30319.296<br/>Number of logical CPUs: 1<br/>Number of displays: 1<br/>Screen dimension: 1024x768<br/>Memory: 50% load, phy 1516mb free/3071mb total, virt 1568mb free/2047mb total.
+&#10;
 							</message>
 							<metainfo
 							loglvl="Info"/>

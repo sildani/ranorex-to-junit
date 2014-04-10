@@ -75,10 +75,9 @@ public class Report {
     node.activity.findAll { it.@modulename.text().size() && it.@result == 'Failed' }.each { f ->
       def type = f.@modulename
       def errormessage = f.errmsg
-      def message = f.item.find { it.@level.text() == 'Failure' }.message + "; " + f.errmsg
+      def message = f.item.find { it.@level.text() == 'Failure' }.message
 
-
-      testcase.failures.add([type:type, message:message])
+      testcase.failures.add([type:type, message:errormessage.size() > 0 ? errormessage : message])
     }
 
     testcase

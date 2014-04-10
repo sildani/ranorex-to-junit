@@ -1,0 +1,26 @@
+<report>
+  <activity timestamp="4/9/2014 9:22:45 PM" duration="0ms">
+    <activity testsuitename="test suite" duration="0ms">
+      <activity testcasename="Outer: 1" duration="0ms">
+        <activity testcasename="Outer: 2" duration="0ms">
+          <activity testcasename="Outer: 3" duration="0ms">
+            <activity testcasename="Real Test Case" duration="0ms">
+              <activity modulename="Inner: Module 1" duration="0ms">
+                <item />
+              </activity>
+              <activity unknownattribute="Unknown" duration="0ms">
+              </activity>
+            </activity>
+          </activity>
+        </activity>
+      </activity>
+    </activity>
+    <activity testsuitename="test suite" duration="0ms">
+      <activity testcasename="Another Real Test Case" duration="0ms">
+        <activity modulename="inner module" duration="0ms">
+          <item />
+        </activity>
+      </activity>
+    </activity>
+  </activity>
+</report>
