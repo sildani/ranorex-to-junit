@@ -3,7 +3,6 @@
 # Mac files
 .DS_Store
 
-
 # Package Files #
 *.jar
 *.war
@@ -11,3 +10,4 @@
 
 # Output #
 gen/
+data/

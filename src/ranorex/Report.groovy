@@ -50,37 +50,38 @@ public class Report {
     this.timestamp = parseTimestamp(ts.@timestamp.text())
 
     xml.activity.activity.findAll { a -> a.@testsuitename != null }.each { suite ->
-
       def newSuite = [name:suite.@testsuitename, duration:parseDuration(suite.@duration), testCases:[]]
-
-      dig(suite, []).each { test ->
-        def testcase = [:]
-        testcase.name = test.@testcasename.text()
-        testcase.result = test.@result.text()
-        testcase.duration = parseDuration(test.@duration.text())
-        testcase.type = test.@type.text()
-        testcase.errorcount = test.@totalerrorcount.text()
-        testcase.warningcount = test.@totalwarningcount.text()
-        testcase.successcount = test.@totalsuccesscount.text()
-        testcase.failedcount = test.@totalfailedcount.text()
-        testcase.blockedcount = test.@totalblockedcount.text()
-        
-        testcase.failures = []
-
-        test.activity.findAll { it.@modulename.text().size() && it.@result == 'Failed' }.each { failure ->
-          def type = failure.@moduletype
-          def message = failure.item.find { it.@level.text() == 'Failure' }.message
-
-          testcase.failures.add([type:type, message:message])
-        }
-
-        newSuite.testCases.add(testcase)
-      }
-
+      newSuite.testCases = dig(suite, []).collect { test -> parseTestCase(test) }
       suites.add(newSuite)
     }
 
     this.duration = suites.sum { s -> s.duration }
+  }
+
+  private Map parseTestCase(node) {
+    def testcase = [:]
+
+    testcase.name = node.@testcasename.text()
+    testcase.result = node.@result.text()
+    testcase.duration = parseDuration(node.@duration.text())
+    testcase.type = node.@type.text()
+    testcase.errorcount = node.@totalerrorcount.text()
+    testcase.warningcount = node.@totalwarningcount.text()
+    testcase.successcount = node.@totalsuccesscount.text()
+    testcase.failedcount = node.@totalfailedcount.text()
+    testcase.blockedcount = node.@totalblockedcount.text()
+
+    testcase.failures = []
+    node.activity.findAll { it.@modulename.text().size() && it.@result == 'Failed' }.each { f ->
+      def type = f.@modulename
+      def errormessage = f.errmsg
+      def message = f.item.find { it.@level.text() == 'Failure' }.message + "; " + f.errmsg
+
+
+      testcase.failures.add([type:type, message:message])
+    }
+
+    testcase
   }
 
   private dig(node, nodes) {

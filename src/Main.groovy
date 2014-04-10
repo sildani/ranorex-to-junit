@@ -1,3 +1,5 @@
+import ranorex.Report
+
 class Main {
   public static void main(args) {
 
@@ -7,7 +9,7 @@ class Main {
     def outputFile = new File(options.outputFile)
 
     outputFile.withWriter { out ->
-      out.write(new RanorexToJunitConverter().convert(inputFile.getText()))
+      out.write(new Report(inputFile.text).toJunit())
     }
   }
 

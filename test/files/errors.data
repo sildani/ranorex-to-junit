@@ -1,0 +1,7041 @@
+﻿<report>
+	<activity
+	user="pos"
+	host="CITF-W7-18176-0"
+	rxversion="4.0.1.21107"
+	osversion="Windows 7 Service Pack 1 32bit"
+	runtimeversion="4.0.30319.296"
+	procarch="32bit"
+	language="en-US"
+	screenresolution="1024x768"
+	timestamp="4/9/2014 11:24:16 PM"
+	timeoutfactor="1"
+	result="Success"
+	duration="0ms"
+	type="root"
+	rid="14aa00e9cee6ae8"
+	totalerrorcount="2"
+	totalwarningcount="0"
+	totalsuccesscount="0"
+	totalfailedcount="2"
+	totalblockedcount="0">
+		<detail>
+			Ranorex Testscript
+		</detail>
+		<activity
+		testsuitename="RRX_SubwayPOS"
+		runconfigname="CIT_POS_MULTI_PRIMARY"
+		runlabel=""
+		maxchildren="19"
+		result="Failed"
+		duration="11.4m"
+		type="test suite"
+		rid="a8aa94c992b2749"
+		totalerrorcount="2"
+		totalwarningcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="2"
+		totalblockedcount="0">
+			<params>
+				<param
+				name="UpgradeVersionFrom">
+				</param>
+				<param
+				name="InstallerPath">
+					C:\puppet_temp\POSInstall
+				</param>
+			</params>
+			<detail>
+			</detail>
+			<activity
+			testcasename="CIT_POS_MULTI_PRIMARY"
+			testcaseid="6ecb1653-cb1b-4e28-9d53-061749ce1a6f"
+			maxchildren="1"
+			result="Failed"
+			duration="11.4m"
+			type="test case"
+			rid="12044d918599fba4"
+			totalerrorcount="2"
+			totalwarningcount="0"
+			totalsuccesscount="0"
+			totalfailedcount="2"
+			totalblockedcount="0">
+				<params/>
+				<detail>
+				</detail>
+				<activity
+				testcasename="TestCase_CI_NewFC_PRIMARY_Setup"
+				testcaseid="2ab0278e-6575-4f7a-8764-97d9b489839e"
+				maxchildren="0"
+				result="Failed"
+				duration="11.4m"
+				type="test case"
+				rid="49d62b793154bf8"
+				totalerrorcount="2"
+				totalwarningcount="0"
+				totalsuccesscount="0"
+				totalfailedcount="1"
+				totalblockedcount="0">
+					<params>
+						<param
+						name="LooseCurrency">
+							100
+						</param>
+						<param
+						name="CoinDispenser">
+							100
+						</param>
+						<param
+						name="ChangeFund">
+							100
+						</param>
+						<param
+						name="BreadCount">
+							100
+						</param>
+						<param
+						name="FlatbreadCount">
+							100
+						</param>
+						<param
+						name="SaladCount">
+							100
+						</param>
+						<param
+						name="MuffinCount">
+							100
+						</param>
+						<param
+						name="OtherCount">
+							100
+						</param>
+						<param
+						name="PizzaCount">
+							100
+						</param>
+						<param
+						name="UserName">
+							5770
+						</param>
+						<param
+						name="Password">
+							0717
+						</param>
+						<param
+						name="SubwayPOSVersion">
+						</param>
+						<param
+						name="InstallerPath">
+							C:\puppet_temp\POSInstall
+						</param>
+						<param
+						name="DataSyncScript">
+							DataSyncScript.zip
+						</param>
+					</params>
+					<detail>
+					</detail>
+					<activity
+					modulename="CopySubwayPOSInstallersFromPuppet"
+					moduleid="d7aae740-28a8-4f9d-b6b0-6406c98ff4fd"
+					moduletype="UserCode"
+					result="Success"
+					duration="11.89s"
+					type="test module"
+					rid="8349d7361a772af"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0">
+						<detail>
+						</detail>
+						<varbindings>
+							<varbinding
+							name="SubwayPOSInstallerPath"
+							value="C:\puppet_temp\POSInstall"/>
+						</varbindings>
+						<item
+						time="00:00.156"
+						level="Info"
+						category="Data">
+							<message>
+								Current variable values:<br/>$SubwayPOSInstallerPath = 'C:\puppet_temp\POSInstall'
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.187"
+						level="Info"
+						category="User">
+							<message>
+								4/9/2014 11:24:16 PM	 Starting copy of POSInstallers to Resource folder
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.218"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\artifact_extract.ps1 copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.234"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\artifact_prev_build_extract.ps1 copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.358"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Installers\SubwayPOS.exe copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.374"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\AutomationTools.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.390"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\AutomationTools.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.390"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\DPUruNet.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.452"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\EntityFramework.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.468"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\EntityFramework.SqlServer.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.499"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\EntityFramework.SqlServer.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.530"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\EntityFramework.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.530"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\ICSharpCode.SharpZipLib.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.561"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\InputSimulator.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.577"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\InputSimulator.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.592"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.BDL.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.639"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.BDL.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.655"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.BusinessDomain.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.670"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.BusinessDomain.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.733"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.DAL.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.748"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.DAL.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.748"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Dashboard.Infrastructure.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.795"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Dashboard.Infrastructure.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.811"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Dashboard.Modules.Core.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.826"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Dashboard.Modules.Core.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.889"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Dashboard.Modules.MenuManagement.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.889"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Dashboard.Modules.MenuManagement.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.904"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Dashboard.Modules.Reports.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.951"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Dashboard.Modules.Reports.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.967"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Dashboard.Resources.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.982"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Dashboard.Resources.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.029"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Devices.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.029"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Devices.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.045"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.DiscountEngine.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.060"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.DiscountEngine.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.107"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.ExternalInterface.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.107"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.ExternalInterface.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.123"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Infrastructure.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.138"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Infrastructure.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.185"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Network.Core.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.185"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Network.Core.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.201"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Security.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.216"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.Security.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.263"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.TaxEngine.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.279"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\IPC.POS.TaxEngine.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.279"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\log4net.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.294"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Lumos.LoggingCommon.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.341"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Lumos.Utility.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.357"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Lumos.WorkerCommon.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.357"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Lumos.WorkerCommunication.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.372"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\LumosSqlCompare.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.435"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\MenuCommunications.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.450"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\MenuWorker.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.450"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\MessagingServiceApi.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.513"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\MessagingServiceApi.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.513"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Microsoft.Practices.EnterpriseLibrary.Common.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.528"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Microsoft.Practices.EnterpriseLibrary.Common.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.544"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Microsoft.Practices.EnterpriseLibrary.Logging.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.606"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Microsoft.Practices.EnterpriseLibrary.Logging.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.622"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Microsoft.Practices.Prism.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.638"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Microsoft.Practices.ServiceLocation.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.716"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Microsoft.Practices.Unity.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.731"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Microsoft.Practices.Unity.Interception.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.747"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Microsoft.Practices.Unity.Interception.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.778"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Microsoft.Practices.Unity.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.794"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\NDesk.Options.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.809"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\NotificationCommunications.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.872"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Core.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.887"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Core.Injector.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.903"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Core.WinApi.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.918"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.ChromeWeb.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.965"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.Flex.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.965"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.Java.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.981"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.Mobile.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.043"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.MozillaWeb.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.059"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.Msaa.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.074"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.Office.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.121"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.RawText.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.137"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.Sap.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.152"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.Web.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.199"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.Win32.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.215"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.WinForms.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.230"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Ranorex.Plugin.Wpf.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.464"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\RRX_SubwayPOS.exe copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.480"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\RRX_SubwayPOS.exe.config copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.496"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\RRX_SubwayPOS.rxtst copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.542"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\SOD_EOD_Modules.rxtmg copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.558"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\SubExClient.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.574"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\SubExClient.pdb copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.620"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\SubwayPOS.exe copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.636"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\System.Windows.Interactivity.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.652"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\WPFLocalizeExtension.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.698"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\WPFToolkit.Extended.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.714"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\XAMLMarkupExtensions.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.730"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\de-DE\IPC.POS.Dashboard.Resources.resources.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.776"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\en-US\IPC.POS.Dashboard.Resources.resources.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.792"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\es-ES\IPC.POS.Dashboard.Resources.resources.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.808"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\CashlessInformation.txt copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.854"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\NetworkSettings.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.870"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\posdb_DEV.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.886"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\posdb_PAR.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.932"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\streams.exe copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.948"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\VD3BatchTransactions1K.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:02.995"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Artifact_extract\Extract_DB_POSConfig.ps1 copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.010"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\DatabaseScripts\Sql_CreateSystemLogins.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.088"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\DatabaseScripts\TestMessagesScript16k.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.104"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\DatabaseScripts\TestMessagesScript500.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.151"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\DatabaseScripts\TestMessagesScript5k.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.166"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\DbCorruption\corrupt_storeinformation.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.182"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\DbCorruption\suspect_db.bat copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.213"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Hotfix\LumosSqlCompare.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.229"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Hotfix\SubExClient.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.244"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ImDisk\imdiskinst.exe copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.291"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\LstFix\IPC.POS.Infrastructure.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.322"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\LstFix\LstFix.exe copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.416"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\LstFix\Lumos.WorkerCommunication.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.432"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\LstFix\Microsoft.Practices.EnterpriseLibrary.Common.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.447"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\LstFix\Microsoft.Practices.EnterpriseLibrary.Common.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.494"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\LstFix\Microsoft.Practices.EnterpriseLibrary.Logging.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.510"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\LstFix\Microsoft.Practices.ServiceLocation.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.525"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\LstFix\Microsoft.Practices.Unity.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.525"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\LstFix\Microsoft.Practices.Unity.Interception.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.588"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\LstFix\NDesk.Options.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.603"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\LstFix\NotificationCommunications.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.619"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\LstFix\Renci.SshNet.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.634"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\DataSyncScript.zip copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.650"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\DataSyncScript36.zip copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.712"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\DataSyncScriptSubEx3.6.00.zip copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.728"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\DataSyncScriptSubex35.zip copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.744"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\DataSyncScriptUnsupported.zip copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.744"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\DataSyncScriptWalmart.zip copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.822"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\EntityFramework.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.837"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Gurock.SmartInspect.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.900"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\ICSharpCode.SharpZipLib.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.915"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Ionic.Zip.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.915"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\IPC.POS.BDL.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.978"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\IPC.POS.BusinessDomain.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:03.993"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\IPC.POS.DAL.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.009"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\IPC.POS.Dashboard.Infrastructure.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.056"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\IPC.POS.Dashboard.Modules.MenuManagement.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.071"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\IPC.POS.Dashboard.Resources.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.071"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\IPC.POS.Devices.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.134"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\IPC.POS.Infrastructure.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.134"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\IPC.POS.TaxEngine.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.149"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\log4net.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.212"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Lumos.WorkerCommunication.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.212"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\LumosSqlCompare.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.243"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\menu.exe copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.274"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\menu.exe.config copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.290"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\MenuCommunications.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.305"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Microsoft.PointOfService.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.383"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Microsoft.Practices.EnterpriseLibrary.Caching.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.399"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Microsoft.Practices.EnterpriseLibrary.Common.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.446"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Microsoft.Practices.EnterpriseLibrary.Logging.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.461"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Microsoft.Practices.Prism.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.477"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Microsoft.Practices.ServiceLocation.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.524"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Microsoft.Practices.Unity.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.539"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Microsoft.Practices.Unity.Interception.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.555"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Renci.SshNet.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.602"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\SPMCommon.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.617"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\SPMLogging.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.633"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\SubExClient.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.680"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Schemas\newprod.xsd copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.695"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Schemas\storedb.xsd copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.711"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Schemas\subway.xsd copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.742"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuUpdateManager\Templates\subway_template.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.758"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\App.config copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.804"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\EmulatorsCommon.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.820"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\EntityFramework.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.836"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\EntityFramework.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.882"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\ICSharpCode.SharpZipLib.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.898"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\IPC.POS.BusinessDomain.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.945"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\IPC.POS.DAL.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.960"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\IPC.POS.Dashboard.Infrastructure.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:04.976"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\IPC.POS.Dashboard.Resources.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.038"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\IPC.POS.DiscountEngine.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.038"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\IPC.POS.Infrastructure.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.054"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\IPC.POS.TaxEngine.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.116"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Lumos.LoggingCommon.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.132"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Lumos.Utility.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.132"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Lumos.WorkerCommon.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.194"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Lumos.WorkerCommunication.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.210"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\MenuCommunications.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.226"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\MenuWorker.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.272"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\MenuWorker.dll.config copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.288"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\MenuWorkerEmulator.exe copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.304"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\MenuWorkerEmulator.exe.config copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.350"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Microsoft.Practices.EnterpriseLibrary.Common.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.366"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Microsoft.Practices.EnterpriseLibrary.Logging.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.382"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Microsoft.Practices.Prism.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.428"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Microsoft.Practices.ServiceLocation.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.444"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Microsoft.Practices.Unity.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.491"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Microsoft.Practices.Unity.Interception.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.506"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\NotificationCommunications.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.522"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\OrderWorker.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.569"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Renci.SshNet.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.584"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Resources\DataSyncScript.zip copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.616"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Resources\DataSyncScript_DBErrors.zip copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.647"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\MenuWorkerEmulator\Resources\DataSyncScript_XmlErrors.zip copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.662"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Multiterminal\Hosts.txt copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.725"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Multiterminal\NetworkSettings.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.772"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderBadDLLs\SmartPOSCommon.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.787"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderBadDLLs\SmartPOSConfig.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.834"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderBadDLLs\SmartPOSInterface.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.850"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderBadDLLs\SmartPOSLogging.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.865"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderBadDLLs\SPM.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.896"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderBadDLLs\SPMCommon.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.896"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderBadDLLs\SPMDialer.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.912"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderBadDLLs\SPMLogging.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.974"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderBadDLLs\SPMPinpad.Controls.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:05.990"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderBadDLLs\SPMPinpad.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.052"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderBadDLLs\SPMUpdateCommon.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.068"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderBadDLLs\SPMUpdateService.dll copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.084"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\RemoteOrderXmls\RemoteOrder_TestCases.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.130"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\CSSubEx35Template.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.146"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\CSTemplate.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.162"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\CSTransmitTemplate.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.193"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\DUINewFCTemplate.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.208"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\DUISubEx35Template.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.224"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\DUITemplate.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.271"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\EFTTemplate.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.286"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\EFTTextTemplate.txt copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.302"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\Storewide2daysTemplate.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.349"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\StorewideTemplate.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.364"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\StorewideTextTemplate.txt copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.380"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\WISRSubEx35Template.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.427"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\WISRSubEx36Template.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.442"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\WISRTemplate.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.458"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\ReportTemplates\WISRTransmitTemplate.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.536"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\base.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.583"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\baseliner.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.645"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\CashControl_OneSaleWithoutCashIn.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.692"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\CashControl_OpenDay.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.754"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\FCS-CashControlReport-Single-Adjustment.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.801"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\inventory.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.848"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\InventoryCount.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:06.895"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\InventoryCounts.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:07.020"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\ready.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:07.285"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\Subex35.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:07.456"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\Subex35WithAllWISR.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:07.644"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\SubEx36.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:07.815"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\TaxQuebecDB.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:08.002"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\TaxUAEDB.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:08.439"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\TerminalRegionDevicesOwner_Completed.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:08.595"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\Transmit2600Messages.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:08.876"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Seeds\VerifyOtherTendersSubreportInCashInReport.seed copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:08.907"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\AddOnTransactionsForReports.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:08.954"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\AddPaidOuts.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.079"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\CaptureSeed.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.157"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\CreateUsersWithTheirRoles.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.188"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\DataSyncScript.zip copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.204"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\DataSyncScriptSubex35.zip copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.344"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\DropConstraints_Subex_3_4.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.360"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\InsertTaxModifier.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.375"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\ModifySubEx35Records.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.469"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\ModifySubEx36Records.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.516"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\MultiTerminalTransactionsForReports.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.625"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\NoTax.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.640"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\RegisterSeed.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.656"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\Seed.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.750"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\TransactionsForDrawerTotalCash.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.765"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\TransactionsForReports.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.843"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\TransactionsForReportsNewFC.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.984"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\TransactionsForReportsNewFCWithSubex35.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:09.999"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\TransactionsForReportsToday.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.015"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\TransmitPreviouslyClosedSubwayWeeks.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.093"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\TransmitPreviouslyClosedSubwayWeeksWithSubEx35.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.108"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\UpdatePromotionsForDiscountEngine.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.218"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SqlSeeds\VerifySeed.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.233"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SubCards\card1.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.264"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SubCards\card2.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.342"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SubCards\card3.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.358"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SubCards\card4.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.374"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SubCards\card5.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.483"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SubCards\card6.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.608"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SubCards\card7.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.623"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\SubCards\card8.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.717"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\TaxEngineXmls\MenuItem.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.732"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\TaxEngineXmls\TaxCategory.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.873"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\TaxEngineXmls\TaxExemption.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.888"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\TaxEngineXmls\TaxImpositionType.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.904"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\TaxEngineXmls\TaxItemRule.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.935"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\TaxEngineXmls\TaxModifier.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:10.951"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\TaxEngineXmls\TaxRateTable.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.060"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\TaxEngineXmls\TaxRateTableRow.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.076"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\TaxEngineXmls\TaxRuleTemplate.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.107"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Templates\subway_template.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.200"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Upgrade\MenuItemIngredientAssignment_GetDeletedMenuItems.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.216"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Upgrade\MenuItemIngredientAssignment_GetDeletedMenuItems7.1.10.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.419"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Resources\Upgrade\TaxReportService.sql copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.450"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Schemas\CurrentDataFeedXmlSchema.xsd copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.559"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Schemas\newprod.xsd copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.590"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Schemas\storedb.xsd copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.622"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Schemas\subway.xsd copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.637"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Simulators\MenuWorkerEmulator\MenuWorker.dll.config copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.668"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Templates\subway_template.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.684"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Templates\subway_template_Australia.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.824"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Templates\subway_template_Canada-NonQuebec.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.840"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Templates\subway_template_Sweden.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.871"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPos\Ranorex\Resources\Ranorex\Templates\subway_template_UAE.xml copied
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:11.887"
+						level="Success"
+						category="User">
+							<message>
+								Folder C:\puppet_temp\POSInstall copied to c:\SubwayPos\Ranorex\Resources
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:11.980"
+						level="Info"
+						category="User">
+							<message>
+								4/9/2014 11:24:27 PM	 Completed copy of POSInstallers to Resource folder
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+					</activity>
+					<activity
+					modulename="SetRanorexDefaultValues"
+					moduleid="8b7153e1-d46a-4418-aec1-3ac7d58ecf15"
+					moduletype="UserCode"
+					result="Success"
+					duration="78ms"
+					type="test module"
+					rid="fdff6eb6504cc46"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0">
+						<detail>
+						</detail>
+						<varbindings/>
+					</activity>
+					<activity
+					modulename="UnInstallSubwayPOS"
+					moduleid="2aaf5042-e646-4cc8-a01f-22095e0abba3"
+					moduletype="UserCode"
+					result="Success"
+					duration="826ms"
+					type="test module"
+					rid="8fe5cd27ceeaf18"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0">
+						<detail>
+						</detail>
+						<varbindings/>
+						<item
+						time="00:12.994"
+						level="Success"
+						category="Validation">
+							<message>
+								Condition is false.
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:13.026"
+						level="Success"
+						category="User">
+							<message>
+								SubwayPOS uninstalled successfully
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+					</activity>
+					<activity
+					modulename="Prereq_PreInstallClean"
+					moduleid="f3603245-e257-4f0b-a827-cb6d01fdebdd"
+					moduletype="UserCode"
+					result="Success"
+					duration="30.93s"
+					type="test module"
+					rid="3373d1b03994f9dc"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0">
+						<detail>
+						</detail>
+						<varbindings/>
+						<item
+						time="00:13.088"
+						level="Info"
+						category="User">
+							<message>
+								stop SplunkForwarder process before deleting directories
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:35.911"
+						level="Success"
+						category="User">
+							<message>
+								SplunkForwarder process completed successfully
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:35.942"
+						level="Info"
+						category="User">
+							<message>
+								Droping FCS db
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:36.176"
+						level="Success"
+						category="User">
+							<message>
+								Database process completed successfully
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:36.332"
+						level="Success"
+						category="User">
+							<message>
+								Database process completed successfully
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:36.348"
+						level="Info"
+						category="User">
+							<message>
+								stop MSSQL$POSEXPRESS process before deleting directories
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:38.922"
+						level="Success"
+						category="User">
+							<message>
+								MSSQL$POSEXPRESS process completed successfully
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:38.953"
+						level="Info"
+						category="User">
+							<message>
+								Deleting Subway POS directories
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:38.953"
+						level="Info"
+						category="User">
+							<message>
+								Deleting directory C:\SubwayPOS\FrontCounter
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:38.968"
+						level="Info"
+						category="User">
+							<message>
+								Deleting directory C:\SubwayPOS\Dashboard
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:38.984"
+						level="Info"
+						category="User">
+							<message>
+								Deleting directory C:\Temp
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:38.984"
+						level="Info"
+						category="User">
+							<message>
+								Deleting directory C:\SubwayPOSBackup
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:39.000"
+						level="Info"
+						category="User">
+							<message>
+								starting SplunkForwarder process after deleting directories
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:41.324"
+						level="Success"
+						category="User">
+							<message>
+								SplunkForwarder process completed successfully
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:41.340"
+						level="Info"
+						category="User">
+							<message>
+								starting MSSQL$POSEXPRESS process after deleting directories
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:43.960"
+						level="Success"
+						category="User">
+							<message>
+								MSSQL$POSEXPRESS process completed successfully
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:43.992"
+						level="Success"
+						category="User">
+							<message>
+								Automation Clean system completed successfully
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+					</activity>
+					<activity
+					modulename="InstallSubwayPOS"
+					moduleid="bee501c0-be4b-4724-80af-586ac4a72b84"
+					moduletype="UserCode"
+					result="Success"
+					duration="10.87s"
+					type="test module"
+					rid="32741cb164c71f4"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0">
+						<detail>
+						</detail>
+						<varbindings>
+							<varbinding
+							name="SubwayPOSInstallerVersion"
+							value=""/>
+						</varbindings>
+						<item
+						time="00:44.023"
+						level="Info"
+						category="Data">
+							<message>
+								Current variable values:<br/>$SubwayPOSInstallerVersion = ''
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:44.038"
+						level="Info"
+						category="User">
+							<message>
+								Using latest SubwayPOS installer version at: c:\SubwayPos\Ranorex\Resources\Installers\SubwayPOS.exe
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:44.054"
+						level="Info"
+						category="User">
+							<message>
+								Running streams.exe
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:44.210"
+						level="Info"
+						category="User">
+							<message>
+								Starting installer from c:\SubwayPos\Ranorex\Resources\Installers\SubwayPOS.exe
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:54.849"
+						level="Success"
+						category="User">
+							<message>
+								Dashboard exe found at C:\SubwayPOS\Dashboard\Dashboard.exe. SubwayPOS installed successfully
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+					</activity>
+					<activity
+					modulename="Prereq_PostInstallConfiguration"
+					moduleid="a5feac93-0dbc-4d0a-8948-c84260c387d2"
+					moduletype="UserCode"
+					result="Success"
+					duration="218ms"
+					type="test module"
+					rid="1d8db57931fc5881"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0">
+						<detail>
+						</detail>
+						<varbindings/>
+						<item
+						time="00:54.912"
+						level="Info"
+						category="User">
+							<message>
+								Trying to copy file c:\SubwayPos\Ranorex\Resources\posdb_DEV.xml to c:\SubwayPOS\FrontCounter\posData\posdb.xml
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:54.927"
+						level="Success"
+						category="User">
+							<message>
+								Copied file c:\SubwayPos\Ranorex\Resources\posdb_DEV.xml to c:\SubwayPOS\FrontCounter\posData\posdb.xml
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:54.974"
+						level="Info"
+						category="User">
+							<message>
+								Updating file c:\SubwayPOS\FrontCounter\posData\posdb.xml with Last IP Octect 71
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:54.990"
+						level="Info"
+						category="User">
+							<message>
+								File c:\SubwayPOS\FrontCounter\posData\posdb.xml updated
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:54.990"
+						level="Success"
+						category="Validation">
+							<message>
+								Verifying node /PosDB/Network/BasePOSClass exist.
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:55.005"
+						level="Success"
+						category="Validation">
+							<message>
+								Verifying node /PosDB/Network/BasePOSClass containst last ip octect.
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:55.021"
+						level="Success"
+						category="User">
+							<message>
+								BasePOSClass validation passed
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:55.021"
+						level="Success"
+						category="User">
+							<message>
+								Found SPM.dll at C:\Program Files\Subway\SPM
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="00:55.099"
+						level="Info"
+						category="User">
+							<message>
+								Enabling DEBUG logging
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+					</activity>
+					<activity
+					modulename="ApplyMenuUpdate"
+					moduleid="182e2873-5ef9-4702-bad6-29126f6fe7e2"
+					moduletype="UserCode"
+					result="Success"
+					duration="421ms"
+					type="test module"
+					rid="1629980120031c09"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0">
+						<detail>
+						</detail>
+						<varbindings>
+							<varbinding
+							name="DataSyncFileName"
+							value="DataSyncScript.zip"/>
+						</varbindings>
+						<item
+						time="00:55.146"
+						level="Info"
+						category="Data">
+							<message>
+								Current variable values:<br/>$DataSyncFileName = 'DataSyncScript.zip'
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:55.146"
+						level="Info"
+						category="User">
+							<message>
+								Launching MenuUpdateManager from c:\SubwayPos\Ranorex\Resources\MenuUpdateManager\menu.exe
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:55.161"
+						level="Info"
+						category="User">
+							<message>
+								Running process c:\SubwayPos\Ranorex\Resources\MenuUpdateManager\menu.exe with arguments DataSyncScript.zip
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:55.177"
+						level="Info"
+						category="User">
+							<message>
+								Waiting 15 seconds for process to exit
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:55.520"
+						level="Info"
+						category="User">
+							<message>
+								Process c:\SubwayPos\Ranorex\Resources\MenuUpdateManager\menu.exe completed
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+					</activity>
+					<activity
+					modulename="PrimaryTerminalOrchestrator"
+					moduleid="88b38bd2-dd83-49b0-bec3-5c41d74b70d0"
+					moduletype="UserCode"
+					result="Failed"
+					duration="10.5m"
+					type="test module"
+					rid="b369268a7ddf3f4"
+					totalerrorcount="2"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0">
+						<detail>
+						</detail>
+						<errmsg>
+							Failed to find item 'NewFrontCounterRepository.SubwayPOSDashboard.GenericView.ButtonHam'.
+						</errmsg>
+						<varbindings/>
+						<item
+						time="00:00.000"
+						level="Info"
+						category="User">
+							<message>
+								Configuring Receiver --&gt; Host:CITF-W7-18176-0 | Port:1000
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.858"
+						level="Info"
+						category="User">
+							<message>
+								Receiver IsRunning: True
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.889"
+						level="Info"
+						category="User">
+							<message>
+								Configuring Sender
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.060"
+						level="Info"
+						category="User">
+							<message>
+								Detected OS = Microsoft Windows 7 Professional&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:01.092"
+						level="Info"
+						category="User">
+							<message>
+								Configuring Sender --&gt; Host:citf-w7-6197-0 | Port:1000
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="01:33.537"
+						level="Info"
+						category="User">
+							<message>
+								Launching SubwayPOS.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:01.992"
+						level="Info"
+						category="SystemSummary">
+							<message>
+								Host: CITF-W7-18176-0<br/>Ranorex version: 4.0.1.21107<br/>OS version: Windows 7 Service Pack 1 32bit<br/>OS default locale: en-US<br/>.NET Runtime version: 4.0.30319.296<br/>Number of logical CPUs: 1<br/>Number of displays: 1<br/>Screen dimension: 1024x768<br/>Memory: 38% load, phy 1888mb free/3071mb total, virt 1575mb free/2047mb total.&#10;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:02.070"
+						level="Success"
+						category="User">
+							<message>
+								File Version Number: 8.0.90.16019 matches Db Version Number: 8.0.90.16019
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="02:02.085"
+						level="Info"
+						category="User">
+							<message>
+								*** Performing Orchestration Handshake. ***
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:02.101"
+						level="Info"
+						category="User">
+							<message>
+								Sending BeginOrchestration message to other terminal at 4/9/2014 11:26:18 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:06.032"
+						level="Info"
+						category="User">
+							<message>
+								Waiting for TerminalReady message from secondary terminal.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:06.048"
+						level="Info"
+						category="User">
+							<message>
+								Check 1 of 12. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:16.172"
+						level="Info"
+						category="User">
+							<message>
+								Check 2 of 12. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:26.203"
+						level="Info"
+						category="User">
+							<message>
+								Check 3 of 12. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:36.234"
+						level="Info"
+						category="User">
+							<message>
+								Check 4 of 12. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:00.000"
+						level="Info"
+						category="User">
+							<message>
+								Received TerminalReady message at 4/9/2014 11:26:55 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:46.264"
+						level="Info"
+						category="User">
+							<message>
+								*** Beginning synchronized plan. ***
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:46.280"
+						level="Info"
+						category="User">
+							<message>
+								*** Performing Menu Update for Multi-Terminal. ***
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:46.483"
+						level="Info"
+						category="User">
+							<message>
+								Clicking on Apply Menu button.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:46.514"
+						level="Info"
+						category="User">
+							<message>
+								MessagingApi info.
+SendMessage Completed.
+Client
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:48.878"
+						level="Info"
+						category="User">
+							<message>
+								Element wpf matches expected visible value True&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:48.902"
+						level="Info"
+						category="User">
+							<message>
+								Custom Message Box is visible.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:48.931"
+						level="Info"
+						category="User">
+							<message>
+								The system detected other teminal(s) running on the network.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:48.953"
+						level="Info"
+						category="User">
+							<message>
+								Clicking OK
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:48.988"
+						level="Info"
+						category="User">
+							<message>
+								Sending ExitPOS message to other terminal at 4/9/2014 11:27:04 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:50.009"
+						level="Info"
+						category="User">
+							<message>
+								Waiting for confirmation from other terminal(s).
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:50.030"
+						level="Info"
+						category="User">
+							<message>
+								Check 1 of 6. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="00:16.304"
+						level="Info"
+						category="User">
+							<message>
+								Received ExitPOSCompleted message at 4/9/2014 11:27:11 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:00.040"
+						level="Info"
+						category="User">
+							<message>
+								Clicking on Apply Menu button.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:49.500"
+						level="Info"
+						category="User">
+							<message>
+								Text Update was applied successfully.<br/> matches expected visible value True&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:49.547"
+						level="Success"
+						category="User">
+							<message>
+								Menu update successfully as expected
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="03:51.637"
+						level="Info"
+						category="Screenshot">
+							<message>
+								<a class="thickbox" rel="module" href="images_RRX_SubwayPOS_20140409_232415\RRX_SubwayPOS_20140409_232415_0_rxlog.jpg"><img src="images_RRX_SubwayPOS_20140409_232415\RRX_SubwayPOS_20140409_232415_0_rxlog_thumb.jpg" alt="Screenshot"/></a>
+							</message>
+						</item>
+						<item
+						time="03:51.637"
+						level="Info"
+						category="User">
+							<message>
+								*** Performing Start Of Day for Multi-Terminal. ***
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:51.653"
+						level="Info"
+						category="User">
+							<message>
+								Launching Restaurant Functions.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:51.715"
+						level="Info"
+						category="User">
+							<message>
+								Restaurant Functions button found
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:51.777"
+						level="Info"
+						category="User">
+							<message>
+								Click Restaurant Functions button
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:51.871"
+						level="Info"
+						category="User">
+							<message>
+								entering User Credentials.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:54.101"
+						level="Info"
+						category="User">
+							<message>
+								Launching Operations Menu.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:54.532"
+						level="Info"
+						category="User">
+							<message>
+								Starting the day.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:54.797"
+						level="Info"
+						category="User">
+							<message>
+								Status bar business date is: CLOSED
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:54.813"
+						level="Info"
+						category="User">
+							<message>
+								Clicking Start Day button
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:54.875"
+						level="Info"
+						category="User">
+							<message>
+								Press Day button to start day
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:55.093"
+						level="Info"
+						category="User">
+							<message>
+								Start Day confirmation
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:55.998"
+						level="Success"
+						category="Validation">
+							<message>
+								Loose Currency
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="03:56.076"
+						level="Info"
+						category="User">
+							<message>
+								Status bar business date is: Wed 4/9
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:56.091"
+						level="Info"
+						category="User">
+							<message>
+								Creating Cash In for NewFC.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:56.107"
+						level="Info"
+						category="User">
+							<message>
+								Entering value in Loose Currency
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:56.185"
+						level="Success"
+						category="Validation">
+							<message>
+								Loose Currency
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="03:56.731"
+						level="Info"
+						category="User">
+							<message>
+								Entering value in Coin Dispenser
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:56.793"
+						level="Success"
+						category="Validation">
+							<message>
+								Coin Dispenser
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="03:57.835"
+						level="Info"
+						category="User">
+							<message>
+								Entering value in Change Fund
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:57.904"
+						level="Success"
+						category="Validation">
+							<message>
+								Change Fund
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="03:58.905"
+						level="Info"
+						category="User">
+							<message>
+								Entering value in Bread Count
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:58.981"
+						level="Success"
+						category="Validation">
+							<message>
+								Bread Count
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="04:00.012"
+						level="Info"
+						category="User">
+							<message>
+								Entering value in FlatBreads Count
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:00.086"
+						level="Success"
+						category="Validation">
+							<message>
+								Flatbread Count
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="04:01.099"
+						level="Info"
+						category="User">
+							<message>
+								Entering value in Salad Count
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:01.174"
+						level="Success"
+						category="Validation">
+							<message>
+								Salad Count
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="04:02.205"
+						level="Info"
+						category="User">
+							<message>
+								Entering value in Muffin Count
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:02.283"
+						level="Success"
+						category="Validation">
+							<message>
+								Muffin Count
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="04:03.325"
+						level="Info"
+						category="User">
+							<message>
+								Entering value in Pizza Count
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:03.403"
+						level="Success"
+						category="Validation">
+							<message>
+								Pizza Count
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="04:04.429"
+						level="Info"
+						category="User">
+							<message>
+								Entering value in Other Count
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:04.505"
+						level="Success"
+						category="Validation">
+							<message>
+								Other Count
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="04:06.015"
+						level="Info"
+						category="User">
+							<message>
+								Cash in Save
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:06.070"
+						level="Success"
+						category="Validation">
+							<message>
+								Save button
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="04:06.139"
+						level="Info"
+						category="User">
+							<message>
+								Cash in Confirm message box
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:06.293"
+						level="Success"
+						category="Validation">
+							<message>
+								Element for path '/form[@automationid='SubwayPOSDashboardMessage']/button[@automationid='customMessageBoxLeftButton']' does exist.
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="04:06.356"
+						level="Info"
+						category="User">
+							<message>
+								Close report
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:10.200"
+						level="Success"
+						category="Validation">
+							<message>
+								Element for path '/form[@name='SubwayPOS Dashboard']/element[@automationid='SubwayPOSFormattedReceiptViewer']' does exist.
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="04:10.287"
+						level="Info"
+						category="User">
+							<message>
+								Launching Cash Home.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:10.392"
+						level="Success"
+						category="Validation">
+							<message>
+								Cash home
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="04:10.972"
+						level="Info"
+						category="User">
+							<message>
+								Sending LaunchPOS message to other terminal at 4/9/2014 11:28:26 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:12.014"
+						level="Info"
+						category="User">
+							<message>
+								Waiting for LaunchPOSCompleted message from secondary terminal.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:12.046"
+						level="Info"
+						category="User">
+							<message>
+								Check 1 of 18. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:22.066"
+						level="Info"
+						category="User">
+							<message>
+								Check 2 of 18. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:32.087"
+						level="Info"
+						category="User">
+							<message>
+								Check 3 of 18. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:42.109"
+						level="Info"
+						category="User">
+							<message>
+								Check 4 of 18. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:08.681"
+						level="Info"
+						category="User">
+							<message>
+								Received LaunchPOSCompleted message at 4/9/2014 11:29:04 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:52.131"
+						level="Info"
+						category="User">
+							<message>
+								Sending VerifySODDisabled message to other terminal at 4/9/2014 11:29:08 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:53.162"
+						level="Info"
+						category="User">
+							<message>
+								Waiting for VerifySODDisabledCompleted message from secondary terminal.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="04:53.183"
+						level="Info"
+						category="User">
+							<message>
+								Check 1 of 18. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:22.912"
+						level="Info"
+						category="User">
+							<message>
+								Received VerifySODDisabledCompleted message at 4/9/2014 11:29:18 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:03.194"
+						level="Info"
+						category="User">
+							<message>
+								Sending VerifyDayOpenedStatusBar message to other terminal at 4/9/2014 11:29:19 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:24.033"
+						level="Info"
+						category="User">
+							<message>
+								Received VerifyDayOpenedStatusBarCompleted message at 4/9/2014 11:29:19 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:04.222"
+						level="Info"
+						category="User">
+							<message>
+								Sending VerifyChangeFundAndBreadCounts message to other terminal at 4/9/2014 11:29:20 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:05.254"
+						level="Info"
+						category="User">
+							<message>
+								Check 1 of 12. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="02:32.844"
+						level="Info"
+						category="User">
+							<message>
+								Received VerifyChangeFundAndBreadCountsCompleted message at 4/9/2014 11:29:28 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:15.276"
+						level="Info"
+						category="User">
+							<message>
+								*** Performing Software Version Verification for Multi-Terminal. ***
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:15.298"
+						level="Info"
+						category="User">
+							<message>
+								Changing VersionNumber in database.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:15.309"
+						level="Info"
+						category="User">
+							<message>
+								Current DSHVersion: 8.0.90.16019 | Increased DSHVersion: 8.0.91.16019
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:15.320"
+						level="Info"
+						category="User">
+							<message>
+								Updating version in db to trick secondary into thinking its not up to date.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:15.353"
+						level="Info"
+						category="User">
+							<message>
+								Changing VersionNumber in database to 8.0.91.16019.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:15.394"
+						level="Success"
+						category="User">
+							<message>
+								Successfully updated VersionNumber in database.
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="05:15.405"
+						level="Info"
+						category="User">
+							<message>
+								Sending SoftwareVersionBootupCheck message to other terminal at 4/9/2014 11:29:31 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:16.427"
+						level="Info"
+						category="User">
+							<message>
+								Waiting for SoftwareVersionBootupCheckCompleted message from secondary terminal.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:16.437"
+						level="Info"
+						category="User">
+							<message>
+								Check 1 of 18. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:26.470"
+						level="Info"
+						category="User">
+							<message>
+								Check 2 of 18. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:36.492"
+						level="Info"
+						category="User">
+							<message>
+								Check 3 of 18. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:46.514"
+						level="Info"
+						category="User">
+							<message>
+								Check 4 of 18. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="05:56.534"
+						level="Info"
+						category="User">
+							<message>
+								Check 5 of 18. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:06.556"
+						level="Info"
+						category="User">
+							<message>
+								Check 6 of 18. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:16.577"
+						level="Info"
+						category="User">
+							<message>
+								Check 7 of 18. 
+Waiting 10 seconds...
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="03:40.504"
+						level="Info"
+						category="User">
+							<message>
+								Received SoftwareVersionBootupCheckCompleted message at 4/9/2014 11:30:36 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:26.599"
+						level="Info"
+						category="User">
+							<message>
+								Reverting VersionNumber in database back to 8.0.90.16019.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:26.620"
+						level="Info"
+						category="User">
+							<message>
+								Changing VersionNumber in database to 8.0.90.16019.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:26.645"
+						level="Success"
+						category="User">
+							<message>
+								Successfully updated VersionNumber in database.
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="06:26.655"
+						level="Info"
+						category="User">
+							<message>
+								*** Performing Baseline Transactions for Multi-Terminal. ***
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:28.698"
+						level="Error"
+						category="User">
+							<message>
+								RefreshSystemSettings Failed: Unable to connect to the remote server
+							</message>
+							<metainfo
+							loglvl="Error"/>
+						</item>
+						<item
+						time="06:28.709"
+						level="Info"
+						category="User">
+							<message>
+								Launch Restaurant Function
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:28.763"
+						level="Info"
+						category="User">
+							<message>
+								Restaurant Functions button found
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:28.848"
+						level="Info"
+						category="User">
+							<message>
+								Click Restaurant Functions button
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:28.925"
+						level="Info"
+						category="User">
+							<message>
+								enter User Credentials
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:31.182"
+						level="Info"
+						category="User">
+							<message>
+								Click  Utilities
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:31.491"
+						level="Info"
+						category="User">
+							<message>
+								Exit SubwayPOS
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:31.762"
+						level="Info"
+						category="User">
+							<message>
+								HasSubwayPOSExited Result=False
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:32.795"
+						level="Info"
+						category="User">
+							<message>
+								HasSubwayPOSExited Result=False
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:33.824"
+						level="Info"
+						category="User">
+							<message>
+								HasSubwayPOSExited Result=True
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:33.840"
+						level="Success"
+						category="User">
+							<message>
+								SubwayPOS exit successfully
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="06:33.856"
+						level="Info"
+						category="SystemSummary">
+							<message>
+								Host: CITF-W7-18176-0<br/>Ranorex version: 4.0.1.21107<br/>OS version: Windows 7 Service Pack 1 32bit<br/>OS default locale: en-US<br/>.NET Runtime version: 4.0.30319.296<br/>Number of logical CPUs: 1<br/>Number of displays: 1<br/>Screen dimension: 1024x768<br/>Memory: 46% load, phy 1635mb free/3071mb total, virt 1563mb free/2047mb total.&#10;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="06:33.856"
+						level="Info"
+						category="User">
+							<message>
+								Launching SubwayPOS.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="07:04.931"
+						level="Info"
+						category="SystemSummary">
+							<message>
+								Host: CITF-W7-18176-0<br/>Ranorex version: 4.0.1.21107<br/>OS version: Windows 7 Service Pack 1 32bit<br/>OS default locale: en-US<br/>.NET Runtime version: 4.0.30319.296<br/>Number of logical CPUs: 1<br/>Number of displays: 1<br/>Screen dimension: 1024x768<br/>Memory: 50% load, phy 1516mb free/3071mb total, virt 1568mb free/2047mb total.&#10;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="07:04.946"
+						level="Info"
+						category="User">
+							<message>
+								Sending ExecuteBaselineTransactions message to other terminal at 4/9/2014 11:31:20 PM.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="07:05.992"
+						level="Info"
+						category="User">
+							<message>
+								Waiting 60 seconds to start baseline transactions on primary.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:08.376"
+						level="Info"
+						category="User">
+							<message>
+								Starting baseline transactions.
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:08.407"
+						level="Info"
+						category="User">
+							<message>
+								Click Footlong
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:09.001"
+						level="Info"
+						category="User">
+							<message>
+								Click Turkey
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:09.267"
+						level="Info"
+						category="User">
+							<message>
+								Click Chips
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:09.813"
+						level="Info"
+						category="User">
+							<message>
+								Click 21Oz drink
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:10.218"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 3 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:10.218"
+						level="Info"
+						category="User">
+							<message>
+								Click on Total
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:10.327"
+						level="Info"
+						category="User">
+							<message>
+								Baseline Transaction Test Case TC01-Simple FVM
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:10.780"
+						level="Info"
+						category="User">
+							<message>
+								Text 8.00 matches expected value 8.00&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:10.795"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal for TC01-Simple FVM matches actual Subtotal of the order which is = 8.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:10.858"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.64 matches expected value 0.64&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:10.889"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Tax for TC01-Simple FVM matches actual Tax of the order which is = 0.64
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:10.951"
+						level="Info"
+						category="User">
+							<message>
+								Text 8.64 matches expected value 8.64&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:10.967"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Total for TC01-Simple FVM matches actual Total of the order which is = 8.64
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:11.014"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Amount Due for TC01-Simple FVM matches actual Amount Due of the order which is = 8.64
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:11.061"
+						level="Info"
+						category="User">
+							<message>
+								Pay the order with cash exact
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:11.201"
+						level="Info"
+						category="User">
+							<message>
+								Closing Drawer
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:12.745"
+						level="Info"
+						category="User">
+							<message>
+								Verify Order Completed
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:13.198"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad visibility is False as expected
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:13.260"
+						level="Success"
+						category="User">
+							<message>
+								Order Summary DataGrid visibility is True as expected
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:13.260"
+						level="Info"
+						category="User">
+							<message>
+								Click on Breakfast tab
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:13.479"
+						level="Info"
+						category="User">
+							<message>
+								Click on Breakfast Three Inch Flatbread
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:13.713"
+						level="Info"
+						category="User">
+							<message>
+								Click on Breakfast Egg&amp;Cheese
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:14.071"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 1 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:14.087"
+						level="Info"
+						category="User">
+							<message>
+								Click Discount
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:14.103"
+						level="Info"
+						category="User">
+							<message>
+								Click 'Discount'
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:14.337"
+						level="Success"
+						category="User">
+							<message>
+								Discount Main screen is launched
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:14.383"
+						level="Info"
+						category="User">
+							<message>
+								Click on Employee Meal Free
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:14.711"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 2 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:14.711"
+						level="Info"
+						category="User">
+							<message>
+								Click on Total
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:14.898"
+						level="Info"
+						category="User">
+							<message>
+								Baseline Transaction Test Case TC02-SubEx35-Breakfast Bacon Egg &amp; Cheese Melt
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:14.961"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.00 matches expected value 0.00&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:14.992"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal for TC02-SubEx35-Breakfast Bacon Egg &amp; Cheese Melt matches actual Subtotal of the order which is = 0.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:15.054"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.00 matches expected value 0.00&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:15.054"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Tax for TC02-SubEx35-Breakfast Bacon Egg &amp; Cheese Melt matches actual Tax of the order which is = 0.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:15.117"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.00 matches expected value 0.00&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:15.132"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Total for TC02-SubEx35-Breakfast Bacon Egg &amp; Cheese Melt matches actual Total of the order which is = 0.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:15.179"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Amount Due for TC02-SubEx35-Breakfast Bacon Egg &amp; Cheese Melt matches actual Amount Due of the order which is = 0.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:15.195"
+						level="Info"
+						category="User">
+							<message>
+								Click on Done
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:16.458"
+						level="Success"
+						category="User">
+							<message>
+								Order Summary DataGrid has 7 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:16.489"
+						level="Info"
+						category="User">
+							<message>
+								Click Footlong
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:16.739"
+						level="Info"
+						category="User">
+							<message>
+								Click Turkey
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:16.895"
+						level="Info"
+						category="User">
+							<message>
+								Click Chips
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:17.238"
+						level="Info"
+						category="User">
+							<message>
+								Click 21Oz drink
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:17.659"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 3 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:17.691"
+						level="Info"
+						category="User">
+							<message>
+								Click 'Discount'
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:17.925"
+						level="Success"
+						category="User">
+							<message>
+								Discount Main screen is launched
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:17.940"
+						level="Info"
+						category="User">
+							<message>
+								Click on Employee 50% Off FVM
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:18.268"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 4 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:18.283"
+						level="Info"
+						category="User">
+							<message>
+								Click on Total
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:18.439"
+						level="Info"
+						category="User">
+							<message>
+								Baseline Transaction Test Case TC03-Employee 50% Off FVM
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:18.564"
+						level="Info"
+						category="User">
+							<message>
+								Text 4.15 matches expected value 4.15&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:18.580"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal for TC03-Employee 50% Off FVM matches actual Subtotal of the order which is = 4.15
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:18.642"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.33 matches expected value 0.33&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:18.658"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Tax for TC03-Employee 50% Off FVM matches actual Tax of the order which is = 0.33
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:18.751"
+						level="Info"
+						category="User">
+							<message>
+								Text 4.48 matches expected value 4.48&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:18.767"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Total for TC03-Employee 50% Off FVM matches actual Total of the order which is = 4.48
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:18.814"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Amount Due for TC03-Employee 50% Off FVM matches actual Amount Due of the order which is = 4.48
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:18.829"
+						level="Info"
+						category="User">
+							<message>
+								Pay the order with cash exact
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:19.017"
+						level="Info"
+						category="User">
+							<message>
+								Closing Drawer
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:19.391"
+						level="Info"
+						category="User">
+							<message>
+								Verify Order Completed
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:19.750"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad visibility is False as expected
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:19.812"
+						level="Success"
+						category="User">
+							<message>
+								Order Summary DataGrid visibility is True as expected
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:19.828"
+						level="Info"
+						category="User">
+							<message>
+								Click 6 inch tab
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:20.077"
+						level="Info"
+						category="User">
+							<message>
+								Click Tuna
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:20.514"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 1 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:20.530"
+						level="Info"
+						category="User">
+							<message>
+								Click 'Discount'
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:20.764"
+						level="Success"
+						category="User">
+							<message>
+								Discount Main screen is launched
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:20.764"
+						level="Info"
+						category="User">
+							<message>
+								Click on Employee Meal Free
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:21.123"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 2 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:21.138"
+						level="Info"
+						category="User">
+							<message>
+								Click on Total
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:21.310"
+						level="Info"
+						category="User">
+							<message>
+								Baseline Transaction Test Case TC04-Employee Free Meal
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:21.403"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.00 matches expected value 0.00&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:21.419"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal for TC04-Employee Free Meal matches actual Subtotal of the order which is = 0.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:21.481"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.00 matches expected value 0.00&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:21.513"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Tax for TC04-Employee Free Meal matches actual Tax of the order which is = 0.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:21.591"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.00 matches expected value 0.00&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:21.622"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Total for TC04-Employee Free Meal matches actual Total of the order which is = 0.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:21.669"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Amount Due for TC04-Employee Free Meal matches actual Amount Due of the order which is = 0.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:21.684"
+						level="Info"
+						category="User">
+							<message>
+								Click on Done
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:22.698"
+						level="Success"
+						category="User">
+							<message>
+								Order Summary DataGrid has 7 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:22.714"
+						level="Info"
+						category="User">
+							<message>
+								Launching POS Tasks
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:22.854"
+						level="Info"
+						category="User">
+							<message>
+								Launching Refund By Item
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:24.492"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 2 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:24.523"
+						level="Info"
+						category="User">
+							<message>
+								Click on Total
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:25.116"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal 9.00 for TC05-Refund By Item matches actual Subtotal of the order which is = 9.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:25.257"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal 0.72 for TC05-Refund By Item matches actual Subtotal of the order which is = 0.72
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:25.475"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal 9.72 for TC05-Refund By Item matches actual Subtotal of the order which is = 9.72
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:25.475"
+						level="Info"
+						category="User">
+							<message>
+								Closing Drawer
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:45.552"
+						level="Info"
+						category="User">
+							<message>
+								Drawer should be closed
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:45.599"
+						level="Success"
+						category="User">
+							<message>
+								Order Summary DataGrid has 7 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:45.599"
+						level="Info"
+						category="User">
+							<message>
+								Launching POS Tasks
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:45.693"
+						level="Info"
+						category="User">
+							<message>
+								Launching Refund By Item
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:46.769"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 1 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:46.785"
+						level="Info"
+						category="User">
+							<message>
+								Click 'Discount'
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:47.050"
+						level="Success"
+						category="User">
+							<message>
+								Discount Main screen is launched
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:47.066"
+						level="Info"
+						category="User">
+							<message>
+								Click on Employee Meal 50 percent off
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:47.378"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 2 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:47.393"
+						level="Info"
+						category="User">
+							<message>
+								Click on Total
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:48.033"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal 2.00 for TC08-Refund By Item With Employee Discount matches actual Subtotal of the order which is = 2.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:48.189"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal 0.16 for TC08-Refund By Item With Employee Discount matches actual Subtotal of the order which is = 0.16
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:48.345"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal 2.16 for TC08-Refund By Item With Employee Discount matches actual Subtotal of the order which is = 2.16
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:48.345"
+						level="Info"
+						category="User">
+							<message>
+								Closing Drawer
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:48.470"
+						level="Success"
+						category="User">
+							<message>
+								Order Summary DataGrid has 7 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:49.187"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 1 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:49.218"
+						level="Info"
+						category="User">
+							<message>
+								Click 'Discount'
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:49.421"
+						level="Success"
+						category="User">
+							<message>
+								Discount Main screen is launched
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:49.468"
+						level="Info"
+						category="User">
+							<message>
+								Click on Employee Meal Free
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:49.796"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 2 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:49.811"
+						level="Info"
+						category="User">
+							<message>
+								Click on Total
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:49.967"
+						level="Info"
+						category="User">
+							<message>
+								Baseline Transaction Test Case TC12-Employee Free Meal
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:50.061"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.00 matches expected value 0.00&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:50.076"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal for TC12-Employee Free Meal matches actual Subtotal of the order which is = 0.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:50.139"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.00 matches expected value 0.00&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:50.154"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Tax for TC12-Employee Free Meal matches actual Tax of the order which is = 0.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:50.217"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.00 matches expected value 0.00&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:50.248"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Total for TC12-Employee Free Meal matches actual Total of the order which is = 0.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:50.310"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Amount Due for TC12-Employee Free Meal matches actual Amount Due of the order which is = 0.00
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:50.357"
+						level="Info"
+						category="User">
+							<message>
+								Click on Done
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:51.590"
+						level="Success"
+						category="User">
+							<message>
+								Order Summary DataGrid has 7 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:51.621"
+						level="Info"
+						category="User">
+							<message>
+								Click on Breakfast tab
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:51.824"
+						level="Info"
+						category="User">
+							<message>
+								Click on Breakfast Three Inch Flat bread
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:52.042"
+						level="Info"
+						category="User">
+							<message>
+								Click on Breakfast flavor selection title bar
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:52.167"
+						level="Info"
+						category="User">
+							<message>
+								Click on Breakfast Bacon Egg&amp;Cheese Item 1
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:52.276"
+						level="Info"
+						category="User">
+							<message>
+								Click on Breakfast Bacon Egg&amp;Cheese Item 2
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:52.650"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 1 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:52.650"
+						level="Info"
+						category="User">
+							<message>
+								Click 'Discount'
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:52.900"
+						level="Success"
+						category="User">
+							<message>
+								Discount Main screen is launched
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:52.916"
+						level="Info"
+						category="User">
+							<message>
+								Click Buy One, Get One
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:53.181"
+						level="Success"
+						category="User">
+							<message>
+								Discount Buy One Get, One screen is launched
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:53.306"
+						level="Info"
+						category="User">
+							<message>
+								Click on Total
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:53.602"
+						level="Info"
+						category="User">
+							<message>
+								Baseline Transaction Test Case TC13-Breakfast Bacon Egg &amp; Cheese Melt BOGO
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:53.727"
+						level="Info"
+						category="User">
+							<message>
+								Text 2.50 matches expected value 2.50&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:53.742"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal for TC13-Breakfast Bacon Egg &amp; Cheese Melt BOGO matches actual Subtotal of the order which is = 2.50
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:53.820"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.20 matches expected value 0.20&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:53.867"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Tax for TC13-Breakfast Bacon Egg &amp; Cheese Melt BOGO matches actual Tax of the order which is = 0.20
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:53.930"
+						level="Info"
+						category="User">
+							<message>
+								Text 2.70 matches expected value 2.70&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:53.961"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Total for TC13-Breakfast Bacon Egg &amp; Cheese Melt BOGO matches actual Total of the order which is = 2.70
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:54.023"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Amount Due for TC13-Breakfast Bacon Egg &amp; Cheese Melt BOGO matches actual Amount Due of the order which is = 2.70
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:54.039"
+						level="Info"
+						category="User">
+							<message>
+								Pay the order with cash exact
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:54.226"
+						level="Info"
+						category="User">
+							<message>
+								Closing Drawer
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:54.600"
+						level="Info"
+						category="User">
+							<message>
+								Verify Order Completed
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:54.975"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad visibility is False as expected
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:55.037"
+						level="Success"
+						category="User">
+							<message>
+								Order Summary DataGrid visibility is True as expected
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:55.053"
+						level="Info"
+						category="User">
+							<message>
+								Launching POS Tasks
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:55.162"
+						level="Info"
+						category="User">
+							<message>
+								Launching Finished Waste
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:55.287"
+						level="Info"
+						category="User">
+							<message>
+								Click Footlong
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:55.739"
+						level="Info"
+						category="User">
+							<message>
+								Click Turkey
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:55.880"
+						level="Info"
+						category="User">
+							<message>
+								Click on Total
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:56.160"
+						level="Info"
+						category="User">
+							<message>
+								Test Case TC15-5-Ring FT Finished Waste
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:56.566"
+						level="Success"
+						category="User">
+							<message>
+								Actual transaction type Finished Waste matches Expected transaction type
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:56.862"
+						level="Success"
+						category="User">
+							<message>
+								Actual amount  matches Expected amount
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:56.925"
+						level="Success"
+						category="User">
+							<message>
+								Order Summary DataGrid has 3 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:56.940"
+						level="Info"
+						category="User">
+							<message>
+								Click Six Inch FB
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:57.128"
+						level="Info"
+						category="User">
+							<message>
+								Click Six Inch FB lock flavor bar
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:57.330"
+						level="Info"
+						category="User">
+							<message>
+								Click Six Inch Spicy Italian FB 1
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:57.471"
+						level="Info"
+						category="User">
+							<message>
+								Click Six Inch Spicy Italian FB 2
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:57.830"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 1 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:57.845"
+						level="Info"
+						category="User">
+							<message>
+								Click 'Discount'
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:58.157"
+						level="Success"
+						category="User">
+							<message>
+								Discount Main screen is launched
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:58.188"
+						level="Info"
+						category="User">
+							<message>
+								Click Buy One, Get One
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:58.422"
+						level="Success"
+						category="User">
+							<message>
+								Discount Buy One Get, One screen is launched
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:58.734"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 2 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:58.750"
+						level="Info"
+						category="User">
+							<message>
+								Click on Total
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:58.875"
+						level="Info"
+						category="User">
+							<message>
+								Baseline Transaction Test Case TC19-BOGO 6 Inch FB
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:59.015"
+						level="Info"
+						category="User">
+							<message>
+								Text 3.25 matches expected value 3.25&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:59.015"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal for TC19-BOGO 6 Inch FB matches actual Subtotal of the order which is = 3.25
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:59.078"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.26 matches expected value 0.26&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:59.078"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Tax for TC19-BOGO 6 Inch FB matches actual Tax of the order which is = 0.26
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:59.124"
+						level="Info"
+						category="User">
+							<message>
+								Text 3.51 matches expected value 3.51&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:59.187"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Total for TC19-BOGO 6 Inch FB matches actual Total of the order which is = 3.51
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:59.265"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Amount Due for TC19-BOGO 6 Inch FB matches actual Amount Due of the order which is = 3.51
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="08:59.265"
+						level="Info"
+						category="User">
+							<message>
+								Pay the order with cash exact
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="08:59.452"
+						level="Info"
+						category="User">
+							<message>
+								Closing Drawer
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:00.326"
+						level="Info"
+						category="User">
+							<message>
+								Verify Order Completed
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:00.669"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad visibility is False as expected
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:00.716"
+						level="Success"
+						category="User">
+							<message>
+								Order Summary DataGrid visibility is True as expected
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:00.731"
+						level="Info"
+						category="User">
+							<message>
+								Click 6 inch tab
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:00.981"
+						level="Info"
+						category="User">
+							<message>
+								Click Subway Club
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:01.152"
+						level="Info"
+						category="User">
+							<message>
+								Click on Total
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:01.464"
+						level="Info"
+						category="User">
+							<message>
+								Baseline Transaction Test Case TC20-Simple order paid via Cash
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:01.605"
+						level="Info"
+						category="User">
+							<message>
+								Text 4.50 matches expected value 4.50&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:01.620"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal for TC20-Simple order paid via Cash matches actual Subtotal of the order which is = 4.50
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:01.683"
+						level="Info"
+						category="User">
+							<message>
+								Text 0.36 matches expected value 0.36&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:01.730"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Tax for TC20-Simple order paid via Cash matches actual Tax of the order which is = 0.36
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:01.776"
+						level="Info"
+						category="User">
+							<message>
+								Text 4.86 matches expected value 4.86&#32;
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:01.792"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Total for TC20-Simple order paid via Cash matches actual Total of the order which is = 4.86
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:01.870"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Amount Due for TC20-Simple order paid via Cash matches actual Amount Due of the order which is = 4.86
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:01.870"
+						level="Info"
+						category="User">
+							<message>
+								Pay the order with cash exact
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:02.042"
+						level="Info"
+						category="User">
+							<message>
+								Closing Drawer
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:02.369"
+						level="Info"
+						category="User">
+							<message>
+								Verify Order Completed
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:02.697"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad visibility is False as expected
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:02.806"
+						level="Success"
+						category="User">
+							<message>
+								Order Summary DataGrid visibility is True as expected
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:05.848"
+						level="Info"
+						category="User">
+							<message>
+								Launching POS Tasks
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:05.942"
+						level="Info"
+						category="User">
+							<message>
+								Launching Refund By Item
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:06.066"
+						level="Info"
+						category="User">
+							<message>
+								Click 6 inch tab
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:06.488"
+						level="Info"
+						category="User">
+							<message>
+								Click Subway Club
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:06.831"
+						level="Success"
+						category="User">
+							<message>
+								CheckPad has 1 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:06.846"
+						level="Info"
+						category="User">
+							<message>
+								Click on Total
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:07.424"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal 4.50 for TC21-Same Day Refund By Item matches actual Subtotal of the order which is = 4.50
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:07.533"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal 0.36 for TC21-Same Day Refund By Item matches actual Subtotal of the order which is = 0.36
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:07.642"
+						level="Success"
+						category="User">
+							<message>
+								Expected Order Subtotal 4.86 for TC21-Same Day Refund By Item matches actual Subtotal of the order which is = 4.86
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:07.658"
+						level="Info"
+						category="User">
+							<message>
+								Closing Drawer
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:07.782"
+						level="Success"
+						category="User">
+							<message>
+								Order Summary DataGrid has 6 row(s) / item(s)
+							</message>
+							<metainfo
+							loglvl="Success"/>
+						</item>
+						<item
+						time="09:07.798"
+						level="Info"
+						category="User"
+						errimg="images_RRX_SubwayPOS_20140409_232415\RRX_SubwayPOS_20140409_232415_1fee4ecd_trace.jpg"
+						errthumb="images_RRX_SubwayPOS_20140409_232415\RRX_SubwayPOS_20140409_232415_1fee4ecd_trace_thumb.jpg">
+							<message>
+								Click on Mini
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="09:08.235"
+						level="Info"
+						category="User"
+						errimg="images_RRX_SubwayPOS_20140409_232415\RRX_SubwayPOS_20140409_232415_c6f3a018_trace.jpg"
+						errthumb="images_RRX_SubwayPOS_20140409_232415\RRX_SubwayPOS_20140409_232415_c6f3a018_trace_thumb.jpg">
+							<message>
+								Click on Ham
+							</message>
+							<metainfo
+							loglvl="Info"/>
+						</item>
+						<item
+						time="11:08.386"
+						level="Error"
+						category="Module"
+						errimg="images_RRX_SubwayPOS_20140409_232415\RRX_SubwayPOS_20140409_232415_dd0ffc1e_trace.jpg"
+						errthumb="images_RRX_SubwayPOS_20140409_232415\RRX_SubwayPOS_20140409_232415_dd0ffc1e_trace_thumb.jpg">
+							<message>
+								No element found for path 'element[@classname='MainView']/element[@classname='FrontCounterContentView']/element[@classname='GenericView']/button[@automationid='Ham']' within 2m.<br/>Failed to find item 'NewFrontCounterRepository.SubwayPOSDashboard.GenericView.ButtonHam'.
+							</message>
+							<metainfo
+							type="repoitem"
+							path="form[@name='SubwayPOS Dashboard']/element[@classname='MainView']/element[@classname='FrontCounterContentView']/element[@classname='GenericView']/button[@automationid='Ham']"
+							fullname="NewFrontCounterRepository.SubwayPOSDashboard.GenericView.ButtonHam"
+							id="428d1be4792e4534891fb8ca6f5ede6e"
+							timeout="270000"
+							stacktrace="   at Ranorex.Core.Repository.RepoItemInfo.Find[T](Boolean findSingle, Boolean throwException)
+   at Dashboard.NewFrontCounterRepositoryFolders.GenericViewFolder.get_ButtonHam()
+   at Dashboard.TestSuites.Modules.NewFrontCounter.BaselineTransactions.T23PercOffOnOrder.VerifyT23PercOffOnOrderInCheckPad()
+   at Dashboard.TestSuites.Modules.NewFrontCounter.BaselineTransactions.T23PercOffOnOrder.Run()
+   at Dashboard.TestSuites.Modules.NewFrontCounter.BaselineTransactions.ExecuteBaselineTransactions.Run()
+   at Dashboard.TestSuites.Modules.Utilities.Multiterminal.MultiterminalUtil.ExecuteBaselineTransactions()
+   at Dashboard.TestSuites.Modules.MessagingApi.PrimaryTerminalOrchestrator.PerformBaselineTransactionsMultiTerminal()
+   at Dashboard.TestSuites.Modules.MessagingApi.PrimaryTerminalOrchestrator.Ranorex.Core.Testing.ITestModule.Run()
+   at Ranorex.Core.Testing.TestSuiteModule.RunInternal(DataContext parentDataContext)"
+							loglvl="Error"/>
+						</item>
+					</activity>
+				</activity>
+			</activity>
+		</activity>
+	</activity>
+</report>
