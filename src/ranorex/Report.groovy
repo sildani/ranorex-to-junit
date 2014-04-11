@@ -10,6 +10,9 @@ public class Report {
   def result
   def suites = []
 
+  public Report() {
+  }
+
   public Report(String xml) {
     parse(xml)
   }
@@ -101,11 +104,11 @@ public class Report {
 
   private String parseDuration(inputDuration) {
     def matcher = inputDuration =~ /([0-9]*\.?[0-9]+)([a-z]*)/
+    def duration = 0
 
     if (matcher.matches()) {
       def value = new BigDecimal(matcher[0][1])
       def unit = matcher[0][2]
-      def duration
 
       switch(unit) {
         case "h":
@@ -121,11 +124,9 @@ public class Report {
           duration = value
           break
       }
-      
-      return round(duration).toString()
     }
 
-    throw new IllegalArgumentException("inputDuration not understood: ${inputDuration}")
+    return round(duration).toString()
   }
 
   private BigDecimal round(value) {

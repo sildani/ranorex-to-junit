@@ -58,4 +58,29 @@ public class ReportTest {
     assert new Diff(report.toJunit(), expected).identical()
   }
 
+  @Test
+  void should_parse_ranoerex_timestamp() {
+    assert new Report().parseTimestamp('3/29/2014 8:05:58 PM') == '2014-03-29T20:05:58'
+    assert new Report().parseTimestamp('12/31/2013 11:59:59 PM') == '2013-12-31T23:59:59'
+  }
+
+  @Test
+  void should_parse_ranorex_duration() {
+    assert new Report().parseDuration('0ms') == '0.0'
+    assert new Report().parseDuration('1.1h') == '3960.0'
+    assert new Report().parseDuration('2.7m') == '162.0'
+    assert new Report().parseDuration('29.7m') == '1782.0'
+    assert new Report().parseDuration('4.6m') == '276.0'
+    assert new Report().parseDuration('2m') == '120.0'
+    assert new Report().parseDuration('10.53s') == '10.5'
+    assert new Report().parseDuration('6848ms') == '6.8'
+    assert new Report().parseDuration('2700ms') == '2.7'
+    assert new Report().parseDuration('1.00:00:04.1950000') == '0.0'
+  }
+
+  @Test
+  void should_default_to_zero_when_duration_not_understood() {
+    assert new Report().parseDuration('not a good value') == '0.0'
+  }
+
 }
